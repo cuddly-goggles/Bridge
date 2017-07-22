@@ -11,11 +11,22 @@ import SnapKit
 import NVActivityIndicatorView
 import UIView_Shake
 import RMessage
+import AlertOnboarding
 
 class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
+    
+    @IBAction func help(_ sender: Any) {
+        let arrayOfImage = ["socialmedia", "port", "software"]
+        let arrayOfTitle = ["Bridge", " Port of youtube-dl library", "Beta Version"]
+        let arrayOfDescription = ["The easiest way to download videos from Youtube, Tumblr, Dailymotion, Vine, Facebook, Instagram, Vimeo, Adobe.tv, Soundcloud and few more sites.",
+            "An experimental port of the youtube-dl project to IOS.",
+            "It’s important to stress that this is a beta version, so there is almost guaranteed to be something that has slipped through the cracks."]
+        let alertView = AlertOnboarding(arrayOfImage: arrayOfImage, arrayOfTitle: arrayOfTitle, arrayOfDescription: arrayOfDescription)
+        alertView.show()
+    }
     @IBAction func download(_ sender: Any) {
         
         

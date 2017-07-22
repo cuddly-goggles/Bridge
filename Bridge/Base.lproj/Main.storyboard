@@ -35,8 +35,18 @@
                                     <action selector="download:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="Rmq-yi-gAL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aws-9q-XGt">
+                                <rect key="frame" x="176" y="588" width="22" height="22"/>
+                                <connections>
+                                    <action selector="help:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="bql-5U-ENn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pGI-2M-4bF" firstAttribute="top" secondItem="aws-9q-XGt" secondAttribute="bottom" constant="8" id="M6K-6D-fFK"/>
+                            <constraint firstItem="aws-9q-XGt" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="wdR-PM-Li4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yQ2-zF-d21"/>
                     <connections>

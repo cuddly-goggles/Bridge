@@ -30,11 +30,8 @@ class DownloadManagerViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(red:0.88, green:0.76, blue:0.76, alpha:1.0)
         tableView.separatorStyle = .none
-        
-
-        
+        UIApplication.shared.isIdleTimerDisabled = true
     }
-    
     func refreshCellForIndex(_ downloadModel: MZDownloadModel, index: Int) {
         let indexPath = IndexPath.init(row: index, section: 0)
         let cell = self.tableView.cellForRow(at: indexPath)

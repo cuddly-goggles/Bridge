@@ -14,4 +14,5 @@ pod 'UIView+Shake'
 pod 'KYCircularProgress'
 pod "RMessage"
 pod "FileExplorer", "~> 1.0.4"
+pod 'AlertOnboarding'
 end

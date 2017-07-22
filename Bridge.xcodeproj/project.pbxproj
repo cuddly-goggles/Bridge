@@ -98,12 +98,12 @@
 			name = "Download Manager";
 			sourceTree = "<group>";
 		};
-		C403228D1F2208A7002AC943 /* Get Link */ = {
+		C403228D1F2208A7002AC943 /* Extraction */ = {
 			isa = PBXGroup;
 			children = (
 				C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */,
 			);
-			name = "Get Link";
+			name = Extraction;
 			sourceTree = "<group>";
 		};
 		C40322901F22122A002AC943 /* File Browser */ = {
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C40322901F22122A002AC943 /* File Browser */,
-				C403228D1F2208A7002AC943 /* Get Link */,
+				C403228D1F2208A7002AC943 /* Extraction */,
 				C40322881F21FE54002AC943 /* Download Manager */,
 				C4EFABC61E441C5F00E725BF /* SearchTextField.swift */,
 				C4EFABC31E4418CD00E725BF /* Views.swift */,
