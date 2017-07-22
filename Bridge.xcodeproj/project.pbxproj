@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40322891F21FE7D002AC943 /* DownloadManagerViewController.swift */; };
+		C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228B1F21FF9B002AC943 /* DownloadCell.swift */; };
+		C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */; };
+		C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40322911F22125A002AC943 /* FilesTableViewController.swift */; };
+		C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40604A71E42C8C400E0693B /* AppDelegate.swift */; };
+		C40604AA1E42C8C400E0693B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40604A91E42C8C400E0693B /* ViewController.swift */; };
+		C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40604AB1E42C8C400E0693B /* Main.storyboard */; };
+		C40604AF1E42C8C400E0693B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40604AE1E42C8C400E0693B /* Assets.xcassets */; };
+		C40604B21E42C8C400E0693B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40604B01E42C8C400E0693B /* LaunchScreen.storyboard */; };
+		C40604C81E42CAD400E0693B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */; };
+		C40604CA1E42CADC00E0693B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C91E42CADC00E0693B /* libz.tbd */; };
+		C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */; };
+		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
+		C4EFABC21E44093900E725BF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC11E44093900E725BF /* Video.swift */; };
+		C4EFABC41E4418CD00E725BF /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC31E4418CD00E725BF /* Views.swift */; };
+		C4EFABC71E441C5F00E725BF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC61E441C5F00E725BF /* SearchTextField.swift */; };
+		C4EFEE361E43719C00E0BED6 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = C4EFEE351E43719C00E0BED6 /* main.py */; };
+		C4EFEE3B1E43B24A00E0BED6 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE371E43B24A00E0BED6 /* BZip2.framework */; };
+		C4EFEE3C1E43B24A00E0BED6 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */; };
+		C4EFEE3D1E43B24A00E0BED6 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE391E43B24A00E0BED6 /* Python.framework */; };
+		C4EFEE3E1E43B24A00E0BED6 /* XZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE3A1E43B24A00E0BED6 /* XZ.framework */; };
+		DE6D489A7BDB861E776E6D9E /* Pods_Bridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB0BFF88F0BEF64F87910E9 /* Pods_Bridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		057F3DE5A96672D226FEA5F4 /* Pods-Bridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bridge/Pods-Bridge.debug.xcconfig"; sourceTree = "<group>"; };
+		9BB0BFF88F0BEF64F87910E9 /* Pods_Bridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40322891F21FE7D002AC943 /* DownloadManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerViewController.swift; sourceTree = "<group>"; };
+		C403228B1F21FF9B002AC943 /* DownloadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractLinkViewController.swift; sourceTree = "<group>"; };
+		C40322911F22125A002AC943 /* FilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTableViewController.swift; sourceTree = "<group>"; };
+		C40604A41E42C8C400E0693B /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40604A71E42C8C400E0693B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C40604A91E42C8C400E0693B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C40604AC1E42C8C400E0693B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C40604AE1E42C8C400E0693B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C40604B11E42C8C400E0693B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C40604B31E42C8C400E0693B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40604B91E42C8E200E0693B /* Bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C40604C91E42CADC00E0693B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+youtube_dl.h"; path = "Bridge/NSObject+youtube_dl.h"; sourceTree = "<group>"; };
+		C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+youtube_dl.m"; path = "Bridge/NSObject+youtube_dl.m"; sourceTree = "<group>"; };
+		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
+		C4EFABC11E44093900E725BF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C4EFABC31E4418CD00E725BF /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Bridge/Views.swift; sourceTree = "<group>"; };
+		C4EFABC61E441C5F00E725BF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		C4EFEE351E43719C00E0BED6 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		C4EFEE371E43B24A00E0BED6 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
+		C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
+		C4EFEE391E43B24A00E0BED6 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
+		C4EFEE3A1E43B24A00E0BED6 /* XZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XZ.framework; sourceTree = "<group>"; };
+		CCCAEFEDC4E016E6372AC774 /* Pods-Bridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bridge/Pods-Bridge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C40604A11E42C8C400E0693B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4EFEE3D1E43B24A00E0BED6 /* Python.framework in Frameworks */,
+				C40604CA1E42CADC00E0693B /* libz.tbd in Frameworks */,
+				C4EFEE3C1E43B24A00E0BED6 /* OpenSSL.framework in Frameworks */,
+				C40604C81E42CAD400E0693B /* libsqlite3.0.tbd in Frameworks */,
+				C4EFEE3E1E43B24A00E0BED6 /* XZ.framework in Frameworks */,
+				C4EFEE3B1E43B24A00E0BED6 /* BZip2.framework in Frameworks */,
+				DE6D489A7BDB861E776E6D9E /* Pods_Bridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A4450865D8E39F0DD64BCD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				057F3DE5A96672D226FEA5F4 /* Pods-Bridge.debug.xcconfig */,
+				CCCAEFEDC4E016E6372AC774 /* Pods-Bridge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C40322881F21FE54002AC943 /* Download Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C40322891F21FE7D002AC943 /* DownloadManagerViewController.swift */,
+				C403228B1F21FF9B002AC943 /* DownloadCell.swift */,
+			);
+			name = "Download Manager";
+			sourceTree = "<group>";
+		};
+		C403228D1F2208A7002AC943 /* Get Link */ = {
+			isa = PBXGroup;
+			children = (
+				C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */,
+			);
+			name = "Get Link";
+			sourceTree = "<group>";
+		};
+		C40322901F22122A002AC943 /* File Browser */ = {
+			isa = PBXGroup;
+			children = (
+				C40322911F22125A002AC943 /* FilesTableViewController.swift */,
+			);
+			name = "File Browser";
+			sourceTree = "<group>";
+		};
+		C406049B1E42C8C400E0693B = {
+			isa = PBXGroup;
+			children = (
+				C4EFABC51E441C4D00E725BF /* Views */,
+				C40604A61E42C8C400E0693B /* Bridge */,
+				C40604A51E42C8C400E0693B /* Products */,
+				C4EFEE341E436C6400E0BED6 /* Youtube-dl */,
+				C40604BC1E42C8F300E0693B /* Frameworks */,
+				2A4450865D8E39F0DD64BCD9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C40604A51E42C8C400E0693B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C40604A41E42C8C400E0693B /* Bridge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C40604A61E42C8C400E0693B /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				C40604A71E42C8C400E0693B /* AppDelegate.swift */,
+				C40604A91E42C8C400E0693B /* ViewController.swift */,
+				C40604AB1E42C8C400E0693B /* Main.storyboard */,
+				C40604AE1E42C8C400E0693B /* Assets.xcassets */,
+				C40604B01E42C8C400E0693B /* LaunchScreen.storyboard */,
+				C40604B31E42C8C400E0693B /* Info.plist */,
+				C40604B91E42C8E200E0693B /* Bridge-Bridging-Header.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		C40604BC1E42C8F300E0693B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C40604C91E42CADC00E0693B /* libz.tbd */,
+				C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */,
+				C4EFEE371E43B24A00E0BED6 /* BZip2.framework */,
+				C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */,
+				C4EFEE391E43B24A00E0BED6 /* Python.framework */,
+				C4EFEE3A1E43B24A00E0BED6 /* XZ.framework */,
+				9BB0BFF88F0BEF64F87910E9 /* Pods_Bridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4EFABC51E441C4D00E725BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C40322901F22122A002AC943 /* File Browser */,
+				C403228D1F2208A7002AC943 /* Get Link */,
+				C40322881F21FE54002AC943 /* Download Manager */,
+				C4EFABC61E441C5F00E725BF /* SearchTextField.swift */,
+				C4EFABC31E4418CD00E725BF /* Views.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C4EFEE341E436C6400E0BED6 /* Youtube-dl */ = {
+			isa = PBXGroup;
+			children = (
+				C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */,
+				C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */,
+				C4EFEE351E43719C00E0BED6 /* main.py */,
+				C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */,
+				C4EFABC11E44093900E725BF /* Video.swift */,
+			);
+			name = "Youtube-dl";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C40604A31E42C8C400E0693B /* Bridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C40604B61E42C8C400E0693B /* Build configuration list for PBXNativeTarget "Bridge" */;
+			buildPhases = (
+				0A2876AE0DA27C9234C806B0 /* [CP] Check Pods Manifest.lock */,
+				C40604A01E42C8C400E0693B /* Sources */,
+				C40604A11E42C8C400E0693B /* Frameworks */,
+				C40604A21E42C8C400E0693B /* Resources */,
+				C40604D81E42CF9F00E0693B /* Refresh Python Source */,
+				8A31A90C4925F883AA19F8A4 /* [CP] Embed Pods Frameworks */,
+				95E4DE5B5B0CC07BEBBD2831 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bridge;
+			productName = Bridge;
+			productReference = C40604A41E42C8C400E0693B /* Bridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C406049C1E42C8C400E0693B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Rishe Co.";
+				TargetAttributes = {
+					C40604A31E42C8C400E0693B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NUM25XX226;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C406049F1E42C8C400E0693B /* Build configuration list for PBXProject "Bridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C406049B1E42C8C400E0693B;
+			productRefGroup = C40604A51E42C8C400E0693B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C40604A31E42C8C400E0693B /* Bridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C40604A21E42C8C400E0693B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C40604B21E42C8C400E0693B /* LaunchScreen.storyboard in Resources */,
+				C40604AF1E42C8C400E0693B /* Assets.xcassets in Resources */,
+				C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */,
+				C4EFEE361E43719C00E0BED6 /* main.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A2876AE0DA27C9234C806B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A31A90C4925F883AA19F8A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95E4DE5B5B0CC07BEBBD2831 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C40604D81E42CF9F00E0693B /* Refresh Python Source */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Refresh Python Source";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/co.rishe.Bridge\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/include\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/co.rishe.Bridge\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages/\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C40604A01E42C8C400E0693B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C40604AA1E42C8C400E0693B /* ViewController.swift in Sources */,
+				C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */,
+				C4EFABC41E4418CD00E725BF /* Views.swift in Sources */,
+				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,
+				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
+				C4EFABC71E441C5F00E725BF /* SearchTextField.swift in Sources */,
+				C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */,
+				C4EFABC21E44093900E725BF /* Video.swift in Sources */,
+				C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */,
+				C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */,
+				C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C40604AB1E42C8C400E0693B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C40604AC1E42C8C400E0693B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C40604B01E42C8C400E0693B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C40604B11E42C8C400E0693B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C40604B41E42C8C400E0693B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C40604B51E42C8C400E0693B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C40604B71E42C8C400E0693B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 057F3DE5A96672D226FEA5F4 /* Pods-Bridge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NUM25XX226;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Bridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rishe.Bridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C40604B81E42C8C400E0693B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCCAEFEDC4E016E6372AC774 /* Pods-Bridge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NUM25XX226;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Bridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rishe.Bridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C406049F1E42C8C400E0693B /* Build configuration list for PBXProject "Bridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C40604B41E42C8C400E0693B /* Debug */,
+				C40604B51E42C8C400E0693B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C40604B61E42C8C400E0693B /* Build configuration list for PBXNativeTarget "Bridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C40604B71E42C8C400E0693B /* Debug */,
+				C40604B81E42C8C400E0693B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C406049C1E42C8C400E0693B /* Project object */;
+}
