@@ -22,6 +22,7 @@ class DownloadManagerViewController: UITableViewController {
         var completion = appDelegate.backgroundSessionCompletionHandler
         
         let downloadmanager = MZDownloadManager(session: sessionIdentifer, delegate: self, completion: completion)
+        
         return downloadmanager
         }()
 
@@ -90,6 +91,7 @@ extension DownloadManagerViewController: MZDownloadManagerDelegate {
     }
     
     func downloadRequestDidUpdateProgress(_ downloadModel: MZDownloadModel, index: Int) {
+        
         self.refreshCellForIndex(downloadModel, index: index)
     }
     
@@ -103,7 +105,7 @@ extension DownloadManagerViewController: MZDownloadManagerDelegate {
     
     func downloadRequestCanceled(_ downloadModel: MZDownloadModel, index: Int) {
         
-        //self.safelyDismissAlertController()
+        self.safelyDismissAlertController()
         
         let indexPath = IndexPath.init(row: index, section: 0)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
@@ -111,15 +113,14 @@ extension DownloadManagerViewController: MZDownloadManagerDelegate {
     
     func downloadRequestFinished(_ downloadModel: MZDownloadModel, index: Int) {
         
-        //self.safelyDismissAlertController()
+        self.safelyDismissAlertController()
         
-        downloadManager.presentNotificationForDownload("Ok", notifBody: "Download did completed")
-        
+        //downloadManager.presentNotificationForDownload("Ok", notifBody: "Download did completed")
+        Notif.shared.downloadComplete(downloadModel.fileName)
         let indexPath = IndexPath.init(row: index, section: 0)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
         
-        let docDirectoryPath : NSString = (MZUtility.baseFilePath as NSString).appendingPathComponent(downloadModel.fileName) as NSString
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: MZUtility.DownloadCompletedNotif as String), object: docDirectoryPath)
+        
     }
     
     func downloadRequestDidFailedWithError(_ error: NSError, downloadModel: MZDownloadModel, index: Int) {

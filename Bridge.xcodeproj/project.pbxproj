@@ -19,6 +19,7 @@
 		C40604C81E42CAD400E0693B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */; };
 		C40604CA1E42CADC00E0693B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C91E42CADC00E0693B /* libz.tbd */; };
 		C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */; };
+		C4599BBB1F23A1E40074101F /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599BBA1F23A1E40074101F /* Notif.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
 		C4EFABC21E44093900E725BF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC11E44093900E725BF /* Video.swift */; };
 		C4EFABC41E4418CD00E725BF /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC31E4418CD00E725BF /* Views.swift */; };
@@ -50,6 +51,7 @@
 		C40604C91E42CADC00E0693B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+youtube_dl.h"; path = "Bridge/NSObject+youtube_dl.h"; sourceTree = "<group>"; };
 		C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+youtube_dl.m"; path = "Bridge/NSObject+youtube_dl.m"; sourceTree = "<group>"; };
+		C4599BBA1F23A1E40074101F /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
 		C4EFABC11E44093900E725BF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABC31E4418CD00E725BF /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Bridge/Views.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C40604A71E42C8C400E0693B /* AppDelegate.swift */,
+				C4599BBA1F23A1E40074101F /* Notif.swift */,
 				C40604A91E42C8C400E0693B /* ViewController.swift */,
 				C40604AB1E42C8C400E0693B /* Main.storyboard */,
 				C40604AE1E42C8C400E0693B /* Assets.xcassets */,
@@ -334,6 +337,7 @@
 			files = (
 				C40604AA1E42C8C400E0693B /* ViewController.swift in Sources */,
 				C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */,
+				C4599BBB1F23A1E40074101F /* Notif.swift in Sources */,
 				C4EFABC41E4418CD00E725BF /* Views.swift in Sources */,
 				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,
 				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
@@ -474,7 +478,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Bridge/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rishe.Bridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +502,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Bridge/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rishe.Bridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";

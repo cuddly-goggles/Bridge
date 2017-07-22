@@ -4,11 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Extract Link View Controller-->
+        <!--Extract-->
         <scene sceneID="GPz-YW-CzE">
             <objects>
                 <viewController id="0Zw-Im-3wV" customClass="ExtractLinkViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +49,7 @@
                             <constraint firstItem="aws-9q-XGt" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="wdR-PM-Li4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yQ2-zF-d21"/>
+                    <navigationItem key="navigationItem" title="Extract" id="yQ2-zF-d21"/>
                     <connections>
                         <outlet property="downloadBtn" destination="g2h-SG-Mgc" id="Rhh-XC-A5q"/>
                         <outlet property="linktext" destination="jwP-gJ-dPA" id="bFd-af-luk"/>
@@ -58,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="1533.5999999999999" y="-116.49175412293854"/>
         </scene>
-        <!--Download Manager View Controller-->
+        <!--Downloading-->
         <scene sceneID="RzA-GC-M37">
             <objects>
                 <tableViewController id="BVI-5a-reF" customClass="DownloadManagerViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +138,7 @@
                             <outlet property="delegate" destination="BVI-5a-reF" id="Wgn-3k-IQd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uF2-DR-UcI"/>
+                    <navigationItem key="navigationItem" title="Downloading" id="uF2-DR-UcI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sj-k3-k9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="716" y="1468"/>
         </scene>
-        <!--Files View Controller-->
+        <!--Files-->
         <scene sceneID="caz-al-fba">
             <objects>
                 <viewController id="toa-Ya-sqA" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,7 +264,7 @@
                             <constraint firstItem="cxz-oj-7Fv" firstAttribute="centerX" secondItem="iPH-yz-131" secondAttribute="centerX" id="kcc-Fc-J8X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G3N-Fd-PDb"/>
+                    <navigationItem key="navigationItem" title="Files" id="G3N-Fd-PDb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY7-wM-ZIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
