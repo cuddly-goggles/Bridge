@@ -62,7 +62,7 @@ class DownloadCell: UITableViewCell {
     func updateCellForRowAtIndexPath(_ indexPath : IndexPath, downloadModel: MZDownloadModel) {
         fileName.text = downloadModel.fileName
         remainSize.text = "\(downloadModel.downloadedFile?.size ?? 0) \(downloadModel.downloadedFile?.unit ?? "KB") of \(downloadModel.file?.size ?? 0) \(downloadModel.file?.unit ?? "KB")"
-        speed.text = "\(downloadModel.speed?.speed ?? 0) \(downloadModel.speed?.unit ?? "KB")\\s"
+        speed.text = "\(downloadModel.speed?.speed ?? 0) \(downloadModel.speed?.unit ?? "KB")/s"
         progressbar.progress = Double(downloadModel.progress)
     }
 

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         yd.extract(url: "https://www.youtube.com/watch?v=d-VOPvny-O0") { (videos) in
             for i in videos.formats {
-                print(i.ext)
+                print(i.ext ?? "")
             }
         }
     
