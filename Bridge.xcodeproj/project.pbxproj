@@ -20,8 +20,9 @@
 		C40604CA1E42CADC00E0693B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C91E42CADC00E0693B /* libz.tbd */; };
 		C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */; };
 		C4599BBB1F23A1E40074101F /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599BBA1F23A1E40074101F /* Notif.swift */; };
+		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
+		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
-		C4EFABC21E44093900E725BF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC11E44093900E725BF /* Video.swift */; };
 		C4EFABC41E4418CD00E725BF /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC31E4418CD00E725BF /* Views.swift */; };
 		C4EFABC71E441C5F00E725BF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC61E441C5F00E725BF /* SearchTextField.swift */; };
 		C4EFEE361E43719C00E0BED6 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C4EFEE351E43719C00E0BED6 /* __main__.py */; };
@@ -52,8 +53,9 @@
 		C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+youtube_dl.h"; path = "Bridge/NSObject+youtube_dl.h"; sourceTree = "<group>"; };
 		C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+youtube_dl.m"; path = "Bridge/NSObject+youtube_dl.m"; sourceTree = "<group>"; };
 		C4599BBA1F23A1E40074101F /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
+		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
-		C4EFABC11E44093900E725BF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABC31E4418CD00E725BF /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Bridge/Views.swift; sourceTree = "<group>"; };
 		C4EFABC61E441C5F00E725BF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		C4EFEE351E43719C00E0BED6 /* __main__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		C406049B1E42C8C400E0693B = {
 			isa = PBXGroup;
 			children = (
+				C4D84F321F269E9B004571C8 /* Server Inside */,
 				C4EFABC51E441C4D00E725BF /* Views */,
 				C40604A61E42C8C400E0693B /* Bridge */,
 				C40604A51E42C8C400E0693B /* Products */,
@@ -165,6 +168,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C4D84F321F269E9B004571C8 /* Server Inside */ = {
+			isa = PBXGroup;
+			children = (
+				C4D84F331F269F00004571C8 /* API.swift */,
+				C4D84F351F269F21004571C8 /* Video.swift */,
+			);
+			name = "Server Inside";
+			sourceTree = "<group>";
+		};
 		C4EFABC51E441C4D00E725BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +196,6 @@
 				C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */,
 				C4EFEE351E43719C00E0BED6 /* __main__.py */,
 				C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */,
-				C4EFABC11E44093900E725BF /* Video.swift */,
 			);
 			name = "Youtube-dl";
 			sourceTree = "<group>";
@@ -343,9 +354,10 @@
 				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
 				C4EFABC71E441C5F00E725BF /* SearchTextField.swift in Sources */,
 				C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */,
-				C4EFABC21E44093900E725BF /* Video.swift in Sources */,
 				C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */,
+				C4D84F361F269F21004571C8 /* Video.swift in Sources */,
 				C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */,
+				C4D84F341F269F00004571C8 /* API.swift in Sources */,
 				C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

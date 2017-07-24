@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import SwiftyJSON
 
-class SwiftyDL {
+
+class SwiftyFlask {
+    static let shared = SwiftyFlask()
     
-    func extract(url: String, completion: @escaping (Video) -> ()) {
+    func run_server() {
         let youtubeDL = YouTube_dl()
-        
         youtubeDL.run_server("")
         
     }

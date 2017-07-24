@@ -22,34 +22,41 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         let arrayOfImage = ["socialmedia", "port", "software"]
         let arrayOfTitle = ["Bridge", " Port of youtube-dl library", "Beta Version"]
         let arrayOfDescription = ["The easiest way to download videos from Youtube, Tumblr, Dailymotion, Vine, Facebook, Instagram, Vimeo, Adobe.tv, Soundcloud and few more sites.",
-            "An experimental port of the youtube-dl project to IOS.",
-            "It’s important to stress that this is a beta version, so there is almost guaranteed to be something that has slipped through the cracks."]
+                                  "An experimental port of the youtube-dl project to IOS.",
+                                  "It’s important to stress that this is a beta version, so there is almost guaranteed to be something that has slipped through the cracks."]
         let alertView = AlertOnboarding(arrayOfImage: arrayOfImage, arrayOfTitle: arrayOfTitle, arrayOfDescription: arrayOfDescription)
         alertView.show()
     }
     @IBAction func download(_ sender: Any) {
         
-        
-        //downloadingViewObj?.downloadManager.addDownloadTask("test.sample", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Google.Chrome.v59.0.3071.115.x86_p30download.com.zip")
-        guard let url = linktext.text else {
-            return
-        }
-        if url != "" {
-            startAnimating()
-            swiftYD.extract(url: url) { (video) in
-                
-                DispatchQueue.main.async {
-                    self.stopAnimating()
-                    self.actionArray(video: video)
-                }
+        if let url = linktext.text {
+            if url != "" {
+                startAnimating()
+                API.shared.info(url, completion: { (video) in
+                    switch video.errorOccured {
+                    case true:
+                        DispatchQueue.main.async {
+                            self.stopAnimating()
+                        }
+                        RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
+                        
+                    case false:
+                        DispatchQueue.main.async {
+                            self.stopAnimating()
+                            self.actionArray(video: video)
+                        }
+                    }
+                })
+            } else {
+                linktext.shake()
             }
-        } else {
-            linktext.shake()
         }
+        
         
     }
+    
     var downloadingViewObj: DownloadManagerViewController?
-    var swiftYD = SwiftyDL()
+    //var swiftYD = SwiftyDL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +65,9 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
-
+        
     }
-
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -76,6 +83,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
             maker.center.equalToSuperview().offset(40)
         }
     }
+    
     
     func actionArray(video: Video) {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
@@ -106,6 +114,8 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         downloadingViewObj = mzDownloadingNav.viewControllers[0] as? DownloadManagerViewController
     }
     
-
     
 }
+
+
+
