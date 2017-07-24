@@ -89,22 +89,10 @@ char *argv[];
                 NSLog(@"Unable to open main.py, abort.");
             } else {
                 ret = PyRun_SimpleFileEx(fd, main_script, 1);
+                NSLog(@"ruuuuuuuuuuuuuuuuuuuuuuuuning");
                 if (ret != 0) {
                     NSLog(@"Application quit abnormally!");
                 } else {
-                    // In a normal iOS application, the following line is what
-                    // actually runs the application. It requires that the
-                    // Objective-C runtime environment has a class named
-                    // "PythonAppDelegate". This project doesn't define
-                    // one, because Objective-C bridging isn't something
-                    // Python does out of the box. You'll need to use
-                    // a library like Rubicon-ObjC [1], Pyobjus [2] or
-                    // PyObjC [3] if you want to run an *actual* iOS app.
-                    // [1] http://pybee.org/rubicon
-                    // [2] http://pyobjus.readthedocs.org/
-                    // [3] https://pythonhosted.org/pyobjc/
-                    
-                    //UIApplicationMain(argc, argv, nil, @"PythonAppDelegate");
                 }
             }
         }

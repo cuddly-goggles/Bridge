@@ -32,18 +32,28 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         if let url = linktext.text {
             if url != "" {
                 startAnimating()
-                API.shared.info(url, completion: { (video) in
-                    switch video.errorOccured {
+                API.shared.info(url, completion: { (video, sucess) in
+                    switch sucess {
                     case true:
-                        DispatchQueue.main.async {
-                            self.stopAnimating()
+                        guard let video = video else {
+                            return
                         }
-                        RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
-                        
+                        switch video.errorOccured {
+                        case true:
+                            DispatchQueue.main.async {
+                                self.stopAnimating()
+                            }
+                            RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
+                            
+                        case false:
+                            DispatchQueue.main.async {
+                                self.stopAnimating()
+                                self.actionArray(video: video)
+                            }
+                        }
                     case false:
                         DispatchQueue.main.async {
                             self.stopAnimating()
-                            self.actionArray(video: video)
                         }
                     }
                 })
