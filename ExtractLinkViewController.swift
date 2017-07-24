@@ -34,9 +34,9 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
                 API.shared.info(url, completion: { (video) in
                     switch video.errorOccured {
                     case true:
-                        break
+                        RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
                     case false:
-                        break
+                        self.actionArray(video: video)
                     }
                 })
             } else {
@@ -77,7 +77,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     }
 
     
-    /*func actionArray(video: Video) {
+    func actionArray(video: Video) {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
         for exts in video.formats {
             let action = UIAlertAction(title: "\(exts.ext ?? "") - \(exts.format ?? "")", style: .default, handler: { (action) in
@@ -105,7 +105,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
         downloadingViewObj = mzDownloadingNav.viewControllers[0] as? DownloadManagerViewController
     }
-    */
+    
 
 }
 
