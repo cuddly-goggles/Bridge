@@ -14,16 +14,13 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    let yd = SwiftyDL()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        yd.extract(url: "https://www.youtube.com/watch?v=d-VOPvny-O0") { (videos) in
-            for i in videos.formats {
-                print(i.ext ?? "")
-            }
-        }
-    
+        let youtubeDL = YouTube_dl()
+        
+        youtubeDL.run_server("")
     }
     
     @IBAction func btn(_ sender: Any) {

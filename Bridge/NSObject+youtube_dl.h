@@ -13,5 +13,5 @@
 #include <dlfcn.h>
 
 @interface YouTube_dl: NSObject
-- (void) exctract: (NSString*)url completion:(void (^)(NSString* done))completionBlock;
+- (void) run_server: (NSString*)url;
 @end

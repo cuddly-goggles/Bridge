@@ -24,7 +24,7 @@
 		C4EFABC21E44093900E725BF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC11E44093900E725BF /* Video.swift */; };
 		C4EFABC41E4418CD00E725BF /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC31E4418CD00E725BF /* Views.swift */; };
 		C4EFABC71E441C5F00E725BF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABC61E441C5F00E725BF /* SearchTextField.swift */; };
-		C4EFEE361E43719C00E0BED6 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = C4EFEE351E43719C00E0BED6 /* main.py */; };
+		C4EFEE361E43719C00E0BED6 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C4EFEE351E43719C00E0BED6 /* __main__.py */; };
 		C4EFEE3B1E43B24A00E0BED6 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE371E43B24A00E0BED6 /* BZip2.framework */; };
 		C4EFEE3C1E43B24A00E0BED6 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */; };
 		C4EFEE3D1E43B24A00E0BED6 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE391E43B24A00E0BED6 /* Python.framework */; };
@@ -56,7 +56,7 @@
 		C4EFABC11E44093900E725BF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABC31E4418CD00E725BF /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Bridge/Views.swift; sourceTree = "<group>"; };
 		C4EFABC61E441C5F00E725BF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
-		C4EFEE351E43719C00E0BED6 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		C4EFEE351E43719C00E0BED6 /* __main__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
 		C4EFEE371E43B24A00E0BED6 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
 		C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
 		C4EFEE391E43B24A00E0BED6 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 			children = (
 				C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */,
 				C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */,
-				C4EFEE351E43719C00E0BED6 /* main.py */,
+				C4EFEE351E43719C00E0BED6 /* __main__.py */,
 				C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */,
 				C4EFABC11E44093900E725BF /* Video.swift */,
 			);
@@ -262,7 +262,7 @@
 				C40604B21E42C8C400E0693B /* LaunchScreen.storyboard in Resources */,
 				C40604AF1E42C8C400E0693B /* Assets.xcassets in Resources */,
 				C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */,
-				C4EFEE361E43719C00E0BED6 /* main.py in Resources */,
+				C4EFEE361E43719C00E0BED6 /* __main__.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
