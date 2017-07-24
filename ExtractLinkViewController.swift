@@ -13,7 +13,7 @@ import UIView_Shake
 import RMessage
 import AlertOnboarding
 
-/*class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
+class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
@@ -29,25 +29,24 @@ import AlertOnboarding
     }
     @IBAction func download(_ sender: Any) {
         
-        
-        //downloadingViewObj?.downloadManager.addDownloadTask("test.sample", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Google.Chrome.v59.0.3071.115.x86_p30download.com.zip")
-        guard let url = linktext.text else {
-            return
-        }
-        if url != "" {
-            startAnimating()
-            //swiftYD.extract(url: url) { (video) in
-                
-                DispatchQueue.main.async {
-                    self.stopAnimating()
-                    self.actionArray(video: video)
-                }
+        if let url = linktext.text {
+            if url != "" {
+                API.shared.info(url, completion: { (video) in
+                    switch video.errorOccured {
+                    case true:
+                        break
+                    case false:
+                        break
+                    }
+                })
+            } else {
+                linktext.shake()
             }
-        } else {
-            linktext.shake()
         }
+        
         
     }
+    
     var downloadingViewObj: DownloadManagerViewController?
     //var swiftYD = SwiftyDL()
     
@@ -78,7 +77,7 @@ import AlertOnboarding
     }
 
     
-    func actionArray(video: Video) {
+    /*func actionArray(video: Video) {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
         for exts in video.formats {
             let action = UIAlertAction(title: "\(exts.ext ?? "") - \(exts.format ?? "")", style: .default, handler: { (action) in
@@ -106,7 +105,9 @@ import AlertOnboarding
         
         downloadingViewObj = mzDownloadingNav.viewControllers[0] as? DownloadManagerViewController
     }
+    */
+
 }
 
 
-*/
+
