@@ -14,7 +14,7 @@ class API {
     static let shared = API()
     
     
-    let BASEURL: String = "http://localhost:9191"
+    let BASEURL: String = "http://87.117.197.45:9191"
     
     
     func info(_ url: String, completion: @escaping (Video) -> ()) {

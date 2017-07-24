@@ -36,7 +36,7 @@ class Video {
                     self.formats.append(fm)
                 }
             } else {
-                self.formats.append(Format(format: json["format"].string, formatID: json["format_id"].string, ext: json["ext"].string, url: json["url"].string))
+                self.formats.append(Format(format: json["info"]["format"].string, formatID: json["info"]["format_id"].string, ext: json["info"]["ext"].string, url: json["info"]["url"].string))
             }
             
             errmsg = ""

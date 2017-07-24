@@ -31,12 +31,20 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
         if let url = linktext.text {
             if url != "" {
+                startAnimating()
                 API.shared.info(url, completion: { (video) in
                     switch video.errorOccured {
                     case true:
+                        DispatchQueue.main.async {
+                            self.stopAnimating()
+                        }
                         RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
+                        
                     case false:
-                        self.actionArray(video: video)
+                        DispatchQueue.main.async {
+                            self.stopAnimating()
+                            self.actionArray(video: video)
+                        }
                     }
                 })
             } else {
@@ -53,7 +61,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setUpDownloadingViewController()
+        setUpDownloadingViewController()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
