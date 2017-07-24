@@ -13,7 +13,7 @@ import UIView_Shake
 import RMessage
 import AlertOnboarding
 
-class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
+/*class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
@@ -36,7 +36,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         }
         if url != "" {
             startAnimating()
-            swiftYD.extract(url: url) { (video) in
+            //swiftYD.extract(url: url) { (video) in
                 
                 DispatchQueue.main.async {
                     self.stopAnimating()
@@ -49,12 +49,12 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
     }
     var downloadingViewObj: DownloadManagerViewController?
-    var swiftYD = SwiftyDL()
+    //var swiftYD = SwiftyDL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpDownloadingViewController()
+        //setUpDownloadingViewController()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
@@ -76,6 +76,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
             maker.center.equalToSuperview().offset(40)
         }
     }
+
     
     func actionArray(video: Video) {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
@@ -105,7 +106,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
         downloadingViewObj = mzDownloadingNav.viewControllers[0] as? DownloadManagerViewController
     }
-    
-
-    
 }
+
+
+*/
