@@ -185,5 +185,5 @@ def version():
 app = Flask(__name__)
 app.register_blueprint(api)
 app.config.from_pyfile('../application.cfg', silent=True)
-app.run(port=5001)
+app.run(port=9191)
 

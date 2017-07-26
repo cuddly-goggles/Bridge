@@ -14,7 +14,7 @@ class API {
     static let shared = API()
     
     
-    let BASEURL: String = "http://127.0.0.1:5001"
+    let BASEURL: String = "http://127.0.0.1:9191"
     
     
     func info(_ url: String, completion: @escaping (Video?, Bool) -> ()) {
@@ -29,10 +29,10 @@ class API {
                     //debugPrint(json)
                     completion(Video(json: json), true)
                 case 400:
-                    RMessage.showNotification(withTitle: "Error", subtitle: "400 Bad Request – For invalid query parameters", type: .error, customTypeName: nil, callback: nil)
+                    RMessage.showNotification(withTitle: "Error", subtitle: "400 Bad Request – invalid query parameters", type: .error, customTypeName: nil, callback: nil)
                     completion(nil, false)
                 case 500:
-                    RMessage.showNotification(withTitle: "Error", subtitle: "500 Internal Server Error – If the extraction fails", type: .error, customTypeName: nil, callback: nil)
+                    RMessage.showNotification(withTitle: "Error", subtitle: "500 Internal Server Error – the extraction fails, Please check your URL", type: .error, customTypeName: nil, callback: nil)
                     completion(nil, false)
                 default:
                     completion(nil, false)
