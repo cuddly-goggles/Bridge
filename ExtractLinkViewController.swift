@@ -99,13 +99,37 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
         for exts in video.formats {
             let action = UIAlertAction(title: "\(exts.ext ?? "") - \(exts.format ?? "")", style: .default, handler: { (action) in
-                self.addDownloadTask(exts, name: video.title ?? "no title")
+                self.copyORdownload(exts, name: video.title ?? "no title")
             })
             alertController.addAction(action)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func copyORdownload(_ exts: Format, name: String) {
+        let alertController = UIAlertController(title: nil, message: "\(name)", preferredStyle: .actionSheet)
+        let downloadAction = UIAlertAction(title: "Download", style: .default, handler: { (action) in
+            self.addDownloadTask(exts, name: name)
+        })
+        alertController.addAction(downloadAction)
+        let copyAction = UIAlertAction(title: "Copy to Clipboard", style: .default, handler: { (action) in
+            self.copyToClipboard(exts, name: name)
+        })
+        alertController.addAction(copyAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func copyToClipboard(_ format: Format, name: String) {
+        guard let url = format.url else {
+            return
+        }
+        UIPasteboard.general.string = url
+        RMessage.showNotification(withTitle: "Success", subtitle: "URL Copied.", type: .success, customTypeName: nil, callback: nil)
     }
     
     func addDownloadTask(_ format: Format, name: String) {
