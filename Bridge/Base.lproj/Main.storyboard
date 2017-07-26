@@ -219,56 +219,21 @@
             </objects>
             <point key="canvasLocation" x="-227" y="1630"/>
         </scene>
-        <!--Files-->
+        <!--Documents-->
         <scene sceneID="VHy-Ne-KCO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="na9-hV-n6D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Files" image="file" id="kW0-sf-bo3"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Documents" image="file" id="kW0-sf-bo3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-mA-QkG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="toa-Ya-sqA" kind="relationship" relationship="rootViewController" id="U4W-Wt-dzM"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5A6-Ex-Yc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="716" y="1468"/>
-        </scene>
-        <!--Files-->
-        <scene sceneID="caz-al-fba">
-            <objects>
-                <viewController id="toa-Ya-sqA" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K1D-vF-Hnq"/>
-                        <viewControllerLayoutGuide type="bottom" id="ugX-HY-4cu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iPH-yz-131">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxz-oj-7Fv">
-                                <rect key="frame" x="122" y="318" width="130" height="30"/>
-                                <state key="normal" title="Show File Manager"/>
-                                <connections>
-                                    <action selector="showFileManager:" destination="toa-Ya-sqA" eventType="touchUpInside" id="btg-k3-Pd2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cxz-oj-7Fv" firstAttribute="centerY" secondItem="iPH-yz-131" secondAttribute="centerY" id="C0o-DB-HGL"/>
-                            <constraint firstItem="cxz-oj-7Fv" firstAttribute="centerX" secondItem="iPH-yz-131" secondAttribute="centerX" id="kcc-Fc-J8X"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Files" id="G3N-Fd-PDb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dY7-wM-ZIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1570" y="1468"/>
         </scene>
     </scenes>
     <resources>

@@ -13,7 +13,6 @@ pod 'NVActivityIndicatorView'
 pod 'UIView+Shake'
 pod 'KYCircularProgress'
 pod "RMessage"
-pod "FileExplorer", "~> 1.0.4"
 pod 'AlertOnboarding'
 pod 'Alamofire', '~> 4.4'
 end
