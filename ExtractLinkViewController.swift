@@ -105,7 +105,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
+        presentAlertview(alertController)
     }
     
     func copyORdownload(_ exts: Format, name: String) {
@@ -121,7 +121,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
+        presentAlertview(alertController)
     }
     
     func copyToClipboard(_ format: Format, name: String) {
@@ -139,6 +139,16 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
         downloadingViewObj?.downloadManager.addDownloadTask("\(name).\(format.ext ?? "mp4")", fileURL: url)
         RMessage.showNotification(withTitle: "Success", subtitle: "Download Started.", type: .success, customTypeName: nil, callback: nil)
+    }
+    
+    func presentAlertview(_ alertController: UIAlertController) {
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        present(alertController, animated: true, completion: nil)
+
     }
     
     func setUpDownloadingViewController() {
