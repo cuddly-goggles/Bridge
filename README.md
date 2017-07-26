@@ -11,3 +11,8 @@ The easiest way to download videos from Youtube, Tumblr, Dailymotion, Vine, Face
 
 [Supported Sites](https://rg3.github.io/youtube-dl/supportedsites.html).
 
+### TO-DO
+
+- [ ] Add Readme for each Branch
+- [ ] Explain What is Happening
+
