@@ -31,7 +31,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-SG-Mgc">
                                 <rect key="frame" x="143" y="305" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download"/>
+                                <state key="normal" title="Extract"/>
                                 <connections>
                                     <action selector="download:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="Rmq-yi-gAL"/>
                                 </connections>

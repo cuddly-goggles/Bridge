@@ -8,28 +8,33 @@
 
 import UIKit
 import FileBrowser
-import FileExplorer
 class FilesViewController: UINavigationController {
     
-    @IBAction func showFileManager(_ sender: Any) {
-        //let fileExplorer = FileExplorerViewController()
-        //self.present(fileExplorer, animated: true, completion: nil)
-        //present(fileBrowser, animated: true, completion: nil)
-    }
+    var fileBrowser: FileBrowser?
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
         
         
-        let fileBrowser = FileBrowser(initialPath: documentsDirectory, allowEditing: true, showCancelButton: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fileBrowser = FileBrowser(initialPath: paths[0], allowEditing: true, showCancelButton: false)
+        self.addChildViewController(fileBrowser!)
+        self.view.addSubview((fileBrowser?.view)!)
+        fileBrowser?.didMove(toParentViewController: self)
         
-        self.addChildViewController(fileBrowser)
-        self.view.addSubview(fileBrowser.view)
-        fileBrowser.didMove(toParentViewController: self)
-
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fileBrowser = nil
+        let vc = self.childViewControllers.last
+        vc?.willMove(toParentViewController: nil)
+        vc?.view.removeFromSuperview()
+        vc?.removeFromParentViewController()
     }
     
 
