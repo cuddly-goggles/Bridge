@@ -2,7 +2,6 @@ PODS:
   - Alamofire (4.5.0)
   - AlertOnboarding (1.9)
   - FileBrowser (0.2.1)
-  - FileExplorer (1.0.4)
   - HexColors (4.0.0)
   - KYCircularProgress (1.0.1)
   - MZDownloadManager (3.3)
@@ -21,7 +20,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlertOnboarding
   - FileBrowser (from `https://github.com/orff/FileBrowser.git`)
-  - FileExplorer (~> 1.0.4)
   - KYCircularProgress
   - MZDownloadManager
   - NVActivityIndicatorView
@@ -43,7 +41,6 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlertOnboarding: 0c97f5c4feac0a4e914bae5d530f66b4dbc6b771
   FileBrowser: 6635449ecdddf58340b79a2fdea60a714be60992
-  FileExplorer: 1f7fbfa839ac391f0fb57b07eb289daa7c090a31
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
   KYCircularProgress: b782af0a68dd2032a4a523e722ec8d571c285cf2
   MZDownloadManager: b6ee998b15a05b25f011d9c715ec6b184729a258
@@ -54,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UIView+Shake: 3ccbf966d40a76ea2cdbdd48d8219d322d5df5f5
 
-PODFILE CHECKSUM: ac5f52b71cf290c496cafcac9418c5eecee2e19c
+PODFILE CHECKSUM: efc91d45fa1d956ec489d6346bcdd1b7ff68112b
 
 COCOAPODS: 1.2.1
