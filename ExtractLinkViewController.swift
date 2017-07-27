@@ -32,23 +32,24 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         if let url = linktext.text {
             if url != "" {
                 startAnimating()
-                API.shared.info(url, completion: { (video, sucess) in
+                API.shared.info(url, completion: { (entries, sucess) in
                     switch sucess {
                     case true:
-                        guard let video = video else {
+                        guard let entries = entries else {
                             return
                         }
-                        switch video.errorOccured {
+                        switch entries.errorOccured {
                         case true:
                             DispatchQueue.main.async {
                                 self.stopAnimating()
                             }
-                            RMessage.showNotification(withTitle: "Error", subtitle: video.errmsg, type: .error, customTypeName: nil, callback: nil)
+                            RMessage.showNotification(withTitle: "Error", subtitle: entries.errmsg, type: .error, customTypeName: nil, callback: nil)
                             
                         case false:
                             DispatchQueue.main.async {
                                 self.stopAnimating()
-                                self.actionArray(video: video)
+                                debugPrint(entries.videos.count)
+                                self.playlistActionArray(entries: entries)
                             }
                         }
                     case false:
@@ -91,6 +92,24 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
             maker.left.equalTo(view).offset(100)
             maker.right.equalTo(view).offset(-100)
             maker.center.equalToSuperview().offset(40)
+        }
+    }
+    
+    
+    func playlistActionArray(entries: Entries) {
+        if entries.videos.count == 1 {
+            self.actionArray(video: entries.videos[0])
+        } else {
+           let alertController = UIAlertController(title: nil, message: "\(entries.title ?? "")", preferredStyle: .actionSheet)
+            for video in entries.videos {
+                let action = UIAlertAction(title: "\(video.title ?? "")", style: .default, handler: { (action) in
+                    self.actionArray(video: video)
+                })
+                alertController.addAction(action)
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            presentAlertview(alertController)
         }
     }
     

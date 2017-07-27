@@ -17,7 +17,7 @@ class API {
     let BASEURL: String = "http://127.0.0.1:9191"
     
     
-    func info(_ url: String, completion: @escaping (Video?, Bool) -> ()) {
+    func info(_ url: String, completion: @escaping (Entries?, Bool) -> ()) {
         let parameters: Parameters = ["url": url, "flatten": "False"]
         
         Alamofire.request(BASEURL + "/api/info", method: .get, parameters: parameters).responseJSON { (response) in
@@ -27,7 +27,7 @@ class API {
                 case 200:
                     let json = JSON(response.result.value!)
                     //debugPrint(json)
-                    completion(Video(json: json), true)
+                    completion(Entries(json: json), true)
                 case 400:
                     RMessage.showNotification(withTitle: "Error", subtitle: "400 Bad Request – invalid query parameters", type: .error, customTypeName: nil, callback: nil)
                     completion(nil, false)
