@@ -29,10 +29,10 @@ class API {
                     //debugPrint(json)
                     completion(Entries(json: json), true)
                 case 400:
-                    RMessage.showNotification(withTitle: "Error", subtitle: "400 Bad Request – invalid query parameters", type: .error, customTypeName: nil, callback: nil)
+                    RMessage.showNotification(withTitle: "400 Bad Request", subtitle: "Invalid query parameters", type: .error, customTypeName: nil, callback: nil)
                     completion(nil, false)
                 case 500:
-                    RMessage.showNotification(withTitle: "Error", subtitle: "500 Internal Server Error – the extraction fails, Please check your URL", type: .error, customTypeName: nil, callback: nil)
+                    RMessage.showNotification(withTitle: "500 Internal Server Error", subtitle: "The extraction fails, Please check your URL or Your Internet service provider might have blocked access to specific websites e.g YouTube, Blogger", type: .error, customTypeName: nil, duration: 8, callback: nil)
                     completion(nil, false)
                 default:
                     completion(nil, false)

@@ -183,7 +183,8 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     func waitforServer() {
         let myqueue = DispatchQueue(label: "waitforsercer")
-        startAnimating(nil, message: nil, messageFont: nil, type: .ballScaleMultiple, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil)
+        
+        startAnimating(nil, message: "Wait a moment please!", messageFont: nil, type: .ballScaleMultiple, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil)
         myqueue.async {
             while true {
                 let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
