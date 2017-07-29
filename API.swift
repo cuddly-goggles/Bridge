@@ -45,5 +45,16 @@ class API {
         }
     }
     
+    func isServerup(completion: @escaping (Bool) -> ()) {
+        
+        Alamofire.request(BASEURL+"/api/version").responseJSON { (response) in
+            switch response.result {
+            case .success:
+                completion(true)
+            case .failure:
+                completion(false)
+            }
+        }
+    }
     
 }
