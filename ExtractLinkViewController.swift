@@ -80,18 +80,20 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    func constraints() {
+        
         linktext.snp.makeConstraints { (maker) in
-            maker.left.equalTo(view).offset(20)
-            maker.right.equalTo(view).offset(-20)
-            maker.center.equalToSuperview().offset(-40)
+            maker.left.equalToSuperview().inset(-20)
+            maker.right.equalToSuperview().inset(-20)
+            maker.centerY.equalToSuperview().inset(-40)
+            maker.centerX.equalToSuperview()
         }
         
         downloadBtn.snp.makeConstraints { (maker) in
-            maker.left.equalTo(view).offset(100)
-            maker.right.equalTo(view).offset(-100)
-            maker.center.equalToSuperview().offset(40)
+            maker.left.equalToSuperview().inset(100)
+            maker.right.equalToSuperview().inset(-100)
+            maker.centerY.equalToSuperview().inset(40)
+            maker.centerX.equalToSuperview()
         }
     }
     
