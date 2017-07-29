@@ -71,7 +71,8 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        waitforServer()
+        constraints()
         setUpDownloadingViewController()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
@@ -83,15 +84,15 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     func constraints() {
         
         linktext.snp.makeConstraints { (maker) in
-            maker.left.equalToSuperview().inset(-20)
-            maker.right.equalToSuperview().inset(-20)
+            maker.left.equalToSuperview().inset(20)
+            maker.right.equalToSuperview().inset(20)
             maker.centerY.equalToSuperview().inset(-40)
             maker.centerX.equalToSuperview()
         }
         
         downloadBtn.snp.makeConstraints { (maker) in
-            maker.left.equalToSuperview().inset(100)
-            maker.right.equalToSuperview().inset(-100)
+            //maker.left.equalToSuperview().inset(100)
+            //maker.right.equalToSuperview().inset(-100)
             maker.centerY.equalToSuperview().inset(40)
             maker.centerX.equalToSuperview()
         }
@@ -180,7 +181,24 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     
+    func waitforServer() {
+        let myqueue = DispatchQueue(label: "waitforsercer")
+        startAnimating(nil, message: nil, messageFont: nil, type: .ballScaleMultiple, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil)
+        myqueue.async {
+            while true {
+                let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
+                if task.1 != nil {
+                    DispatchQueue.main.async {
+                        self.stopAnimating()
+                        RMessage.showNotification(withTitle: "Server Initialized", subtitle: "Server is now running.", type: .success, customTypeName: nil, callback: nil)
+                    }
+                    break
+                }
+                sleep(2)
+            }
+        }
+        
+        
+    }
+
 }
-
-
-

@@ -20,6 +20,7 @@
 		C40604CD1E42CD2A00E0693B /* NSObject+ObjcFlask.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */; };
 		C4599BBB1F23A1E40074101F /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599BBA1F23A1E40074101F /* Notif.swift */; };
 		C4A1E3B81F2D102400D7837E /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1E3B71F2D102400D7837E /* Server.swift */; };
+		C4A1E3BA1F2D339800D7837E /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1E3B91F2D339800D7837E /* URLSession.swift */; };
 		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
 		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
@@ -51,6 +52,7 @@
 		C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjcFlask.m"; path = "Bridge/NSObject+ObjcFlask.m"; sourceTree = "<group>"; };
 		C4599BBA1F23A1E40074101F /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
 		C4A1E3B71F2D102400D7837E /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		C4A1E3B91F2D339800D7837E /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				C4D84F331F269F00004571C8 /* API.swift */,
 				C4D84F351F269F21004571C8 /* Video.swift */,
 				C4A1E3B71F2D102400D7837E /* Server.swift */,
+				C4A1E3B91F2D339800D7837E /* URLSession.swift */,
 			);
 			name = "Server Inside";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			files = (
 				C4A1E3B81F2D102400D7837E /* Server.swift in Sources */,
 				C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */,
+				C4A1E3BA1F2D339800D7837E /* URLSession.swift in Sources */,
 				C4599BBB1F23A1E40074101F /* Notif.swift in Sources */,
 				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,
 				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
