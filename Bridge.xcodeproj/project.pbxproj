@@ -12,14 +12,14 @@
 		C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */; };
 		C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40322911F22125A002AC943 /* FilesTableViewController.swift */; };
 		C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40604A71E42C8C400E0693B /* AppDelegate.swift */; };
-		C40604AA1E42C8C400E0693B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40604A91E42C8C400E0693B /* ViewController.swift */; };
 		C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40604AB1E42C8C400E0693B /* Main.storyboard */; };
 		C40604AF1E42C8C400E0693B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40604AE1E42C8C400E0693B /* Assets.xcassets */; };
 		C40604B21E42C8C400E0693B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40604B01E42C8C400E0693B /* LaunchScreen.storyboard */; };
 		C40604C81E42CAD400E0693B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */; };
 		C40604CA1E42CADC00E0693B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C40604C91E42CADC00E0693B /* libz.tbd */; };
-		C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */; };
+		C40604CD1E42CD2A00E0693B /* NSObject+ObjcFlask.m in Sources */ = {isa = PBXBuildFile; fileRef = C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */; };
 		C4599BBB1F23A1E40074101F /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599BBA1F23A1E40074101F /* Notif.swift */; };
+		C4A1E3B81F2D102400D7837E /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1E3B71F2D102400D7837E /* Server.swift */; };
 		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
 		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
@@ -40,7 +40,6 @@
 		C40322911F22125A002AC943 /* FilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTableViewController.swift; sourceTree = "<group>"; };
 		C40604A41E42C8C400E0693B /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40604A71E42C8C400E0693B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C40604A91E42C8C400E0693B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C40604AC1E42C8C400E0693B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C40604AE1E42C8C400E0693B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40604B11E42C8C400E0693B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,9 +47,10 @@
 		C40604B91E42C8E200E0693B /* Bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		C40604C71E42CAD400E0693B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C40604C91E42CADC00E0693B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+youtube_dl.h"; path = "Bridge/NSObject+youtube_dl.h"; sourceTree = "<group>"; };
-		C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+youtube_dl.m"; path = "Bridge/NSObject+youtube_dl.m"; sourceTree = "<group>"; };
+		C40604CB1E42CD2A00E0693B /* NSObject+ObjcFlask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjcFlask.h"; path = "Bridge/NSObject+ObjcFlask.h"; sourceTree = "<group>"; };
+		C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjcFlask.m"; path = "Bridge/NSObject+ObjcFlask.m"; sourceTree = "<group>"; };
 		C4599BBA1F23A1E40074101F /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
+		C4A1E3B71F2D102400D7837E /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
@@ -140,7 +140,6 @@
 			children = (
 				C40604A71E42C8C400E0693B /* AppDelegate.swift */,
 				C4599BBA1F23A1E40074101F /* Notif.swift */,
-				C40604A91E42C8C400E0693B /* ViewController.swift */,
 				C40604AB1E42C8C400E0693B /* Main.storyboard */,
 				C40604AE1E42C8C400E0693B /* Assets.xcassets */,
 				C40604B01E42C8C400E0693B /* LaunchScreen.storyboard */,
@@ -169,6 +168,7 @@
 			children = (
 				C4D84F331F269F00004571C8 /* API.swift */,
 				C4D84F351F269F21004571C8 /* Video.swift */,
+				C4A1E3B71F2D102400D7837E /* Server.swift */,
 			);
 			name = "Server Inside";
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 		C4EFEE341E436C6400E0BED6 /* Youtube-dl */ = {
 			isa = PBXGroup;
 			children = (
-				C40604CB1E42CD2A00E0693B /* NSObject+youtube_dl.h */,
-				C40604CC1E42CD2A00E0693B /* NSObject+youtube_dl.m */,
+				C40604CB1E42CD2A00E0693B /* NSObject+ObjcFlask.h */,
+				C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */,
 				C4EFEE351E43719C00E0BED6 /* __main__.py */,
 				C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */,
 			);
@@ -340,12 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40604AA1E42C8C400E0693B /* ViewController.swift in Sources */,
+				C4A1E3B81F2D102400D7837E /* Server.swift in Sources */,
 				C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */,
 				C4599BBB1F23A1E40074101F /* Notif.swift in Sources */,
 				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,
 				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
-				C40604CD1E42CD2A00E0693B /* NSObject+youtube_dl.m in Sources */,
+				C40604CD1E42CD2A00E0693B /* NSObject+ObjcFlask.m in Sources */,
 				C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */,
 				C4D84F361F269F21004571C8 /* Video.swift in Sources */,
 				C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */,

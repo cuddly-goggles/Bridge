@@ -12,6 +12,6 @@
 
 #include <dlfcn.h>
 
-@interface YouTube_dl: NSObject
-- (void) run_server: (NSString*)url;
+@interface ObjcFlask: NSObject
+- (void) run_server: (int)port;
 @end

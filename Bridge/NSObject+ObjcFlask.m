@@ -6,9 +6,9 @@
 //  Copyright © 2017 Rishe Co. All rights reserved.
 //
 
-#import "NSObject+youtube_dl.h"
+#import "NSObject+ObjcFlask.h"
 
-@implementation YouTube_dl: NSObject
+@implementation ObjcFlask: NSObject
 
 int ret = 0;
 unsigned int i;
@@ -27,7 +27,7 @@ char *argv[];
     return self;
 }
     
--(void) run_server:(NSString *)url {
+-(void) run_server:(int)port {
     
     dispatch_queue_t myQueue = dispatch_queue_create("Fucking Queue",NULL);
     dispatch_async(myQueue, ^{
@@ -57,32 +57,47 @@ char *argv[];
         Py_Initialize();
         
         // Set the name of the main script
-        main_script = [
-                       [[NSBundle mainBundle] pathForResource:@"__main__"
-                                                       ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
+        //main_script = [[[NSBundle mainBundle] pathForResource:@"__main__" ofType:@"py"]cStringUsingEncoding:NSUTF8StringEncoding];
         
-        if (main_script == NULL) {
+       /* if (main_script == NULL) {
             NSLog(@"Unable to locate appname main module file");
             exit(-1);
-        }
+        }*/
         
         // Construct argv for the interpreter
         python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
         
-        python_argv[0] = Py_DecodeLocale(main_script, NULL);
+        //python_argv[0] = Py_DecodeLocale(main_script, NULL);
         for (i = 1; i < argc; i++) {
             python_argv[i] = Py_DecodeLocale(argv[i], NULL);
         }
         
-        PySys_SetArgv(argc, python_argv);
+        //PySys_SetArgv(argc, python_argv);
         
         // If other modules are using threads, we need to initialize them.
         PyEval_InitThreads();
         
         // Start the main.py script
-        NSLog(@"Running %s", main_script);
+        //NSLog(@"Running %s", main_script);
         
-        @try {
+        PyObject* module = PyImport_ImportModule("swiftyflask");
+        assert(module != NULL);
+        
+        PyObject* klass = PyObject_GetAttrString(module, "SwiftyFlask");
+        assert(klass != NULL);
+        
+        PyObject* instance = PyObject_CallObject(klass, NULL);
+        assert(instance != NULL);
+        
+        PyObject* result = PyObject_CallMethod(instance, "runserver", "(i)", port);
+        assert(result != NULL);
+        
+        
+        
+        
+        
+        
+        /*@try {
             FILE* fd = fopen(main_script, "r");
             if (fd == NULL) {
                 ret = 1;
@@ -111,6 +126,8 @@ char *argv[];
             PyMem_RawFree(python_argv);
         }
         NSLog(@"Leaving");
+         */
+        
         
     });
 

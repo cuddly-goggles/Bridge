@@ -9,12 +9,3 @@
 import UIKit
 
 
-class SwiftyFlask {
-    static let shared = SwiftyFlask()
-    
-    func run_server() {
-        let youtubeDL = YouTube_dl()
-        youtubeDL.run_server("")
-        
-    }
-}

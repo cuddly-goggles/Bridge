@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RMessage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,9 +42,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch isup {
             case true:
                 NSLog("Server is already up")
+                
             case false:
-                NSLog("Server was not up")
-                SwiftyFlask.shared.run_server()
+                switch Server.shared.serverState {
+                case .assignedTorun, .running:
+                    NSLog("Goona run or running")
+                case .notInitialized:
+                    NSLog("Server was not up")
+                    Server.shared.runserver()
+                    RMessage.showNotification(withTitle: "Server Initialization", subtitle: "Initializing Server please wait a moment", type: .warning, customTypeName: nil, callback: nil)
+                    
+                }
             }
         }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
