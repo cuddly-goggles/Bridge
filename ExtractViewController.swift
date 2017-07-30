@@ -14,7 +14,7 @@ import RMessage
 import AlertOnboarding
 import MessageUI
 
-class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable, MFMailComposeViewControllerDelegate {
+class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
     
     var downloadingViewObj: DownloadManagerViewController?
     
@@ -210,12 +210,18 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable, 
         
         
     }
+}
 
+
+
+
+extension ExtractViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["aboutsajjad@gmail.com"])
+            mail.setSubject("Bridge - BUG")
             mail.setMessageBody("<p>Bug Report Bridge</p>", isHTML: true)
             present(mail, animated: true)
         } else {
@@ -226,4 +232,5 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable, 
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
+
 }

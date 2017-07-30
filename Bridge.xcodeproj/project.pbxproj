@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40322891F21FE7D002AC943 /* DownloadManagerViewController.swift */; };
 		C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228B1F21FF9B002AC943 /* DownloadCell.swift */; };
-		C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */; };
+		C403228F1F2208CA002AC943 /* ExtractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403228E1F2208CA002AC943 /* ExtractViewController.swift */; };
 		C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40322911F22125A002AC943 /* FilesTableViewController.swift */; };
 		C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40604A71E42C8C400E0693B /* AppDelegate.swift */; };
 		C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40604AB1E42C8C400E0693B /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 		9BB0BFF88F0BEF64F87910E9 /* Pods_Bridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40322891F21FE7D002AC943 /* DownloadManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerViewController.swift; sourceTree = "<group>"; };
 		C403228B1F21FF9B002AC943 /* DownloadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
-		C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractLinkViewController.swift; sourceTree = "<group>"; };
+		C403228E1F2208CA002AC943 /* ExtractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractViewController.swift; sourceTree = "<group>"; };
 		C40322911F22125A002AC943 /* FilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTableViewController.swift; sourceTree = "<group>"; };
 		C40604A41E42C8C400E0693B /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40604A71E42C8C400E0693B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		C403228D1F2208A7002AC943 /* Extraction */ = {
 			isa = PBXGroup;
 			children = (
-				C403228E1F2208CA002AC943 /* ExtractLinkViewController.swift */,
+				C403228E1F2208CA002AC943 /* ExtractViewController.swift */,
 			);
 			name = Extraction;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 				C4D84F361F269F21004571C8 /* Video.swift in Sources */,
 				C403228C1F21FF9B002AC943 /* DownloadCell.swift in Sources */,
 				C4D84F341F269F00004571C8 /* API.swift in Sources */,
-				C403228F1F2208CA002AC943 /* ExtractLinkViewController.swift in Sources */,
+				C403228F1F2208CA002AC943 /* ExtractViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

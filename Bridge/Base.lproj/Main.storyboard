@@ -17,7 +17,7 @@
         <!--Extract-->
         <scene sceneID="GPz-YW-CzE">
             <objects>
-                <viewController id="0Zw-Im-3wV" customClass="ExtractLinkViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Zw-Im-3wV" customClass="ExtractViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zAz-KF-sFD"/>
                         <viewControllerLayoutGuide type="bottom" id="pGI-2M-4bF"/>
@@ -34,12 +34,6 @@
                                     <action selector="download:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="Rmq-yi-gAL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aws-9q-XGt">
-                                <rect key="frame" x="176" y="588" width="22" height="22"/>
-                                <connections>
-                                    <action selector="help:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="bql-5U-ENn"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g https://www.youtube.com/watch?v=UHwVyplU3Pg" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jwP-gJ-dPA">
                                 <rect key="frame" x="39" y="260" width="296" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,27 +48,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lle-P4-6rn">
-                                <rect key="frame" x="148" y="550" width="78" height="30"/>
-                                <state key="normal" title="Report Bug"/>
-                                <connections>
-                                    <action selector="reportBug:" destination="0Zw-Im-3wV" eventType="touchUpInside" id="baR-gW-O0J"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aws-9q-XGt" firstAttribute="top" secondItem="lle-P4-6rn" secondAttribute="bottom" constant="8" id="95w-x7-IP8"/>
-                            <constraint firstItem="pGI-2M-4bF" firstAttribute="top" secondItem="aws-9q-XGt" secondAttribute="bottom" constant="8" id="M6K-6D-fFK"/>
-                            <constraint firstItem="lle-P4-6rn" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="OAT-M8-vd5"/>
-                            <constraint firstItem="aws-9q-XGt" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="wdR-PM-Li4"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Extract" id="yQ2-zF-d21"/>
+                    <navigationItem key="navigationItem" title="Extract" id="yQ2-zF-d21">
+                        <barButtonItem key="leftBarButtonItem" image="bug" id="r1X-E5-kLa">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="reportBug:" destination="0Zw-Im-3wV" id="OfH-7d-x8V"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="JzJ-qe-nC4">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="help:" destination="0Zw-Im-3wV" id="wvL-Rc-Ad6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="downloadBtn" destination="g2h-SG-Mgc" id="Rhh-XC-A5q"/>
                         <outlet property="linktext" destination="jwP-gJ-dPA" id="bFd-af-luk"/>
-                        <outlet property="reportBugBtn" destination="lle-P4-6rn" id="2rI-cY-Bc1"/>
                         <outlet property="toplabel" destination="dMt-fL-Uhn" id="gqp-Fe-z3C"/>
                     </connections>
                 </viewController>
@@ -205,7 +198,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="CgT-Lg-XTh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Extraction" image="exreact" id="sSv-1y-Sgw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Il-3m-yaz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Il-3m-yaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -224,7 +217,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MpG-2X-qnA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Downloading" image="download" id="Of6-fS-7Lw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPg-7S-EVq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QPg-7S-EVq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -243,7 +236,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Documents" image="file" id="kW0-sf-bo3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-mA-QkG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2Z-mA-QkG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -255,8 +248,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bug" width="32" height="32"/>
         <image name="download" width="25" height="25"/>
         <image name="exreact" width="25" height="25"/>
         <image name="file" width="25" height="25"/>
+        <image name="info" width="25" height="25"/>
     </resources>
 </document>
