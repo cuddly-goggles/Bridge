@@ -31,17 +31,14 @@ class FilesViewController: UINavigationController {
     }
     
     func initfilebrowser() {
+        //fileBrowser = FileBrowser(initialPath: paths[0])
         fileBrowser = FileBrowser(initialPath: paths[0], allowEditing: true, showCancelButton: false)
         
     }
     
     func addfilebroswerview() {
-        fileBrowser?.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - (self.tabBarController?.tabBar.frame.height)!)
+        //fileBrowser?.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - (self.tabBarController?.tabBar.frame.height)!)
         self.view.addSubview((fileBrowser?.view)!)
-    }
-    func addwhiteview() {
-        let uiview = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
-        fileBrowser?.view.addSubview(uiview)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -53,6 +50,7 @@ class FilesViewController: UINavigationController {
         vc?.view.removeFromSuperview()
         vc?.removeFromParentViewController()
         */
+        
     }
     
 

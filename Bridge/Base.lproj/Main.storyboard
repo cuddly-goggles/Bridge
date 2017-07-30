@@ -23,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pGI-2M-4bF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vkD-w8-ebT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-SG-Mgc">
@@ -87,7 +87,7 @@
             <objects>
                 <tableViewController id="BVI-5a-reF" customClass="DownloadManagerViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="VG5-UX-vO5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.46739886817004456" green="0.62378611125102468" blue="0.84747577609175839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,9 +182,9 @@
         <!--Tab Bar Controller-->
         <scene sceneID="XGd-Kf-T2x">
             <objects>
-                <tabBarController id="cCe-HV-bNh" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="miq-rS-Rmm">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="cCe-HV-bNh" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="miq-rS-Rmm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -202,10 +202,10 @@
         <!--Extraction-->
         <scene sceneID="HTQ-vJ-gHr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CgT-Lg-XTh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="CgT-Lg-XTh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Extraction" image="exreact" id="sSv-1y-Sgw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Il-3m-yaz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Il-3m-yaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -221,10 +221,10 @@
         <!--Downloading-->
         <scene sceneID="L7h-z1-d9P">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MpG-2X-qnA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MpG-2X-qnA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Downloading" image="download" id="Of6-fS-7Lw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPg-7S-EVq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QPg-7S-EVq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -240,10 +240,10 @@
         <!--Documents-->
         <scene sceneID="VHy-Ne-KCO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Documents" image="file" id="kW0-sf-bo3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-mA-QkG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2Z-mA-QkG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

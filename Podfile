@@ -7,8 +7,9 @@ target 'Bridge' do
   
 pod 'SwiftyJSON'
 pod "MZDownloadManager"
-pod 'FileBrowser', :git => 'https://github.com/orff/FileBrowser.git'
+
 pod 'SnapKit', '~> 3.2.0'
+pod 'FileBrowser', :git => 'https://github.com/aboutsajjad/FileBrowser.git'
 pod 'NVActivityIndicatorView'
 pod 'UIView+Shake'
 pod 'KYCircularProgress'
