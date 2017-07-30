@@ -82,6 +82,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     func constraints() {
         
         linktext.snp.makeConstraints { (maker) in
+            maker.height.equalTo(40)
             maker.left.equalToSuperview().inset(20)
             maker.right.equalToSuperview().inset(20)
             maker.centerY.equalToSuperview().inset(-40)
