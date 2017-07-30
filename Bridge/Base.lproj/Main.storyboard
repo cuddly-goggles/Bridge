@@ -183,7 +183,7 @@
         <scene sceneID="XGd-Kf-T2x">
             <objects>
                 <tabBarController hidesBottomBarWhenPushed="YES" id="cCe-HV-bNh" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="miq-rS-Rmm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -205,7 +205,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="CgT-Lg-XTh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Extraction" image="exreact" id="sSv-1y-Sgw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Il-3m-yaz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Il-3m-yaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -224,7 +224,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MpG-2X-qnA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Downloading" image="download" id="Of6-fS-7Lw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QPg-7S-EVq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPg-7S-EVq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -243,7 +243,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Documents" image="file" id="kW0-sf-bo3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2Z-mA-QkG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-mA-QkG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

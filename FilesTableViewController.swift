@@ -16,18 +16,14 @@ class FilesViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initfilebrowser()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         self.addChildViewController(fileBrowser!)
         addfilebroswerview()
         fileBrowser?.didMove(toParentViewController: self)
         
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if fileBrowser == nil {
-            initfilebrowser()
-            addfilebroswerview()
-        }
     }
     
     func initfilebrowser() {
@@ -43,13 +39,13 @@ class FilesViewController: UINavigationController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(true)
         fileBrowser?.view.removeFromSuperview()
-        fileBrowser = nil
+        //fileBrowser = nil
         
-        /*let vc = self.childViewControllers.last
+        let vc = self.childViewControllers.last
         vc?.willMove(toParentViewController: nil)
         vc?.view.removeFromSuperview()
         vc?.removeFromParentViewController()
-        */
+        
         
     }
     
