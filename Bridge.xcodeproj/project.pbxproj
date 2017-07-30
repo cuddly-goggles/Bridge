@@ -21,6 +21,9 @@
 		C4599BBB1F23A1E40074101F /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599BBA1F23A1E40074101F /* Notif.swift */; };
 		C4A1E3B81F2D102400D7837E /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1E3B71F2D102400D7837E /* Server.swift */; };
 		C4A1E3BA1F2D339800D7837E /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1E3B91F2D339800D7837E /* URLSession.swift */; };
+		C4A8D9AF1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AC1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf */; };
+		C4A8D9B01F2E1CBC00B086A4 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AD1F2E1CBC00B086A4 /* OpenSans-CondLight.ttf */; };
+		C4A8D9B11F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AE1F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf */; };
 		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
 		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
@@ -53,6 +56,9 @@
 		C4599BBA1F23A1E40074101F /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
 		C4A1E3B71F2D102400D7837E /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		C4A1E3B91F2D339800D7837E /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		C4A8D9AC1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
+		C4A8D9AD1F2E1CBC00B086A4 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
+		C4A8D9AE1F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLightItalic.ttf"; sourceTree = "<group>"; };
 		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				C40604A51E42C8C400E0693B /* Products */,
 				C4EFEE341E436C6400E0BED6 /* Youtube-dl */,
 				C40604BC1E42C8F300E0693B /* Frameworks */,
+				C4A8D9AA1F2E1CA200B086A4 /* Resources */,
 				2A4450865D8E39F0DD64BCD9 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +170,24 @@
 				9BB0BFF88F0BEF64F87910E9 /* Pods_Bridge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4A8D9AA1F2E1CA200B086A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4A8D9AB1F2E1CB200B086A4 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C4A8D9AB1F2E1CB200B086A4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4A8D9AC1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf */,
+				C4A8D9AD1F2E1CBC00B086A4 /* OpenSans-CondLight.ttf */,
+				C4A8D9AE1F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		C4D84F321F269E9B004571C8 /* Server Inside */ = {
@@ -269,8 +294,11 @@
 			files = (
 				C40604B21E42C8C400E0693B /* LaunchScreen.storyboard in Resources */,
 				C40604AF1E42C8C400E0693B /* Assets.xcassets in Resources */,
+				C4A8D9B01F2E1CBC00B086A4 /* OpenSans-CondLight.ttf in Resources */,
+				C4A8D9AF1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf in Resources */,
 				C40604AD1E42C8C400E0693B /* Main.storyboard in Resources */,
 				C4EFEE361E43719C00E0BED6 /* __main__.py in Resources */,
+				C4A8D9B11F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

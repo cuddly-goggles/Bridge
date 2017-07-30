@@ -12,17 +12,26 @@ import NVActivityIndicatorView
 import UIView_Shake
 import RMessage
 import AlertOnboarding
+import MessageUI
 
-class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
+class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable, MFMailComposeViewControllerDelegate {
     
+    var downloadingViewObj: DownloadManagerViewController?
+    
+    @IBOutlet weak var reportBugBtn: UIButton!
+    @IBOutlet weak var toplabel: UILabel!
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
     
+    @IBAction func reportBug(_ sender: Any) {
+        sendEmail()
+    }
     @IBAction func help(_ sender: Any) {
         let arrayOfImage = ["socialmedia", "port", "software"]
-        let arrayOfTitle = ["Bridge", " Port of youtube-dl library", "Beta Version"]
-        let arrayOfDescription = ["The easiest way to download videos from Youtube, Tumblr, Dailymotion, Vine, Facebook, Instagram, Vimeo, Adobe.tv, Soundcloud and few more sites.",
-                                  "An experimental port of the youtube-dl project to IOS.",
+        let arrayOfTitle = ["Bridge", " Port of youtube-dl library", "Beta Version", "Start Usin"]
+        let arrayOfDescription = [
+                                "Our platform will display all the available links that can be downloaded for video (webm, mp4, flv, 3gp, m4a, mp3). Please be patient, downloading a video can take a few minutes to complete.",
+                                  "An experimental port of the youtube-dl library to IOS.",
                                   "It’s important to stress that this is a beta version, so there is almost guaranteed to be something that has slipped through the cracks."]
         let alertView = AlertOnboarding(arrayOfImage: arrayOfImage, arrayOfTitle: arrayOfTitle, arrayOfDescription: arrayOfDescription)
         alertView.show()
@@ -63,8 +72,6 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    var downloadingViewObj: DownloadManagerViewController?
-    //var swiftYD = SwiftyDL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,25 +82,29 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
-        
     }
-    
-    
     func constraints() {
         
         linktext.snp.makeConstraints { (maker) in
             maker.height.equalTo(40)
             maker.left.equalToSuperview().inset(20)
             maker.right.equalToSuperview().inset(20)
-            maker.centerY.equalToSuperview().inset(-40)
+            maker.centerY.equalToSuperview().inset(-10)
             maker.centerX.equalToSuperview()
         }
         downloadBtn.snp.makeConstraints { (maker) in
             //maker.left.equalToSuperview().inset(100)
             //maker.right.equalToSuperview().inset(-100)
-            maker.centerY.equalToSuperview().inset(40)
+            maker.centerY.equalToSuperview().inset(80)
             maker.centerX.equalToSuperview()
         }
+        toplabel.snp.makeConstraints { (make) in
+            //make.top.equalTo(view.snp.topMargin)
+            make.bottom.equalTo(linktext.snp.top).inset(-20)
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.centerX.equalToSuperview()
+        }
+        
     }
     
     
@@ -200,4 +211,19 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         
     }
 
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["aboutsajjad@gmail.com"])
+            mail.setMessageBody("<p>Bug Report Bridge</p>", isHTML: true)
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 }

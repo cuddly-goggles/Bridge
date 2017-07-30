@@ -25,6 +25,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-CondBold.ttf</string>
+		<string>OpenSans-CondLight.ttf</string>
+		<string>OpenSans-CondLightItalic.ttf</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
 	<key>UIBackgroundModes</key>
