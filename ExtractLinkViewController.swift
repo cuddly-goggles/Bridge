@@ -28,7 +28,6 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
         alertView.show()
     }
     @IBAction func download(_ sender: Any) {
-        
         if let url = linktext.text {
             if url != "" {
                 startAnimating()
@@ -62,8 +61,6 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
                 linktext.shake()
             }
         }
-        
-        
     }
     
     var downloadingViewObj: DownloadManagerViewController?
@@ -71,6 +68,7 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
         waitforServer()
         constraints()
         setUpDownloadingViewController()
@@ -89,7 +87,6 @@ class ExtractLinkViewController: UIViewController, NVActivityIndicatorViewable {
             maker.centerY.equalToSuperview().inset(-40)
             maker.centerX.equalToSuperview()
         }
-        
         downloadBtn.snp.makeConstraints { (maker) in
             //maker.left.equalToSuperview().inset(100)
             //maker.right.equalToSuperview().inset(-100)

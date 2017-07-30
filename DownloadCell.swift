@@ -12,6 +12,8 @@ import SnapKit
 import KYCircularProgress
 class DownloadCell: UITableViewCell {
 
+    
+    @IBOutlet weak var timeremain: UILabel!
     @IBOutlet weak var stackview: UIStackView!
     @IBOutlet weak var fileName: UILabel!
     @IBOutlet weak var remainSize: UILabel!
@@ -48,9 +50,6 @@ class DownloadCell: UITableViewCell {
             maker.right.equalToSuperview().offset(-5)
             maker.bottom.equalToSuperview().offset(-5)
         }
-
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -61,9 +60,10 @@ class DownloadCell: UITableViewCell {
     
     func updateCellForRowAtIndexPath(_ indexPath : IndexPath, downloadModel: MZDownloadModel) {
         fileName.text = downloadModel.fileName
-        remainSize.text = "\(downloadModel.downloadedFile?.size ?? 0) \(downloadModel.downloadedFile?.unit ?? "KB") of \(downloadModel.file?.size ?? 0) \(downloadModel.file?.unit ?? "KB")"
-        speed.text = "\(downloadModel.speed?.speed ?? 0) \(downloadModel.speed?.unit ?? "KB")/s"
+        remainSize.text = "\(downloadModel.downloadedFile?.size.rounded() ?? 0) \(downloadModel.downloadedFile?.unit ?? "KB") of \(downloadModel.file?.size.rounded() ?? 0) \(downloadModel.file?.unit ?? "KB")"
+        speed.text = "\(downloadModel.speed?.speed.rounded() ?? 0) \(downloadModel.speed?.unit ?? "KB")/s"
         progressbar.progress = Double(downloadModel.progress)
+        timeremain.text = "\(downloadModel.remainingTime?.hours ?? 0):\(downloadModel.remainingTime?.minutes ?? 0):\(downloadModel.remainingTime?.seconds ?? 0)"
     }
 
 }

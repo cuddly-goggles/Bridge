@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RMessage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch isup {
             case true:
                 NSLog("Server is already up")
-                
             case false:
                 switch Server.shared.serverState {
                 case .assignedTorun, .running:
@@ -50,8 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case .notInitialized:
                     NSLog("Server was not up")
                     Server.shared.runserver()
-                    RMessage.showNotification(withTitle: "Server Initialization", subtitle: "Initializing Server please wait a moment", type: .warning, customTypeName: nil, callback: nil)
-                    
                 }
             }
         }

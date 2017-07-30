@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import RMessage
 enum ServerState {
     case running
     case assignedTorun
@@ -25,6 +25,7 @@ struct Server {
         serverState = .notInitialized
     }
     mutating func runserver() {
+        RMessage.showNotification(withTitle: "Server Initialization", subtitle: "Initializing Server please wait a moment", type: .warning, customTypeName: nil, callback: nil)
         objcServer.run_server(9191)
         serverState = .assignedTorun
         

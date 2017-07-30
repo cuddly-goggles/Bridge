@@ -8,6 +8,7 @@
 
 import UIKit
 import MZDownloadManager
+import RMessage
 let alertControllerViewTag: Int = 500
 
 class DownloadManagerViewController: UITableViewController {
@@ -29,7 +30,7 @@ class DownloadManagerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor(red:0.88, green:0.76, blue:0.76, alpha:1.0)
+        tableView.backgroundColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
         tableView.separatorStyle = .none
         UIApplication.shared.isIdleTimerDisabled = true
     }
@@ -126,8 +127,9 @@ extension DownloadManagerViewController: MZDownloadManagerDelegate {
     func downloadRequestDidFailedWithError(_ error: NSError, downloadModel: MZDownloadModel, index: Int) {
         self.safelyDismissAlertController()
         self.refreshCellForIndex(downloadModel, index: index)
+        RMessage.showNotification(withTitle: "\(downloadModel.fileName ?? "")", subtitle: error.localizedDescription, type: .error, customTypeName: nil, callback: nil)
         
-        debugPrint("Error while downloading file: \(downloadModel.fileName)  Error: \(error)")
+        //debugPrint(error.localizedFailureReason)
     }
     
     //Oppotunity to handle destination does not exists error
