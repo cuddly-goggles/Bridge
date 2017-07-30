@@ -18,7 +18,7 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
     
     var downloadingViewObj: DownloadManagerViewController?
     
-    @IBOutlet weak var reportBugBtn: UIButton!
+    
     @IBOutlet weak var toplabel: UILabel!
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
