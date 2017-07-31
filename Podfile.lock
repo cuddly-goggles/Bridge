@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FileBrowser:
-    :commit: 9cbf7d0155e082329a876f167ea5ae4fa2afefaa
+    :commit: 331363537cf8faa1949e6b0e6c7eb5c79e00e92a
     :git: https://github.com/aboutsajjad/FileBrowser.git
 
 SPEC CHECKSUMS:
@@ -51,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UIView+Shake: 3ccbf966d40a76ea2cdbdd48d8219d322d5df5f5
 
-PODFILE CHECKSUM: b40b6e68e2bb36a6d867af0f27fb1da18e2ffffe
+PODFILE CHECKSUM: e932dc3f8f6a63ee46b37d0ba5ce2229cdc562d2
 
 COCOAPODS: 1.2.1

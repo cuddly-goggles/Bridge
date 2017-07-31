@@ -15,40 +15,13 @@ class FilesViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initfilebrowser()
+        fileBrowser = FileBrowser(initialPath: paths[0], allowEditing: true, showCancelButton: false)
+        self.addChildViewController(fileBrowser!)
+        self.view.addSubview((fileBrowser?.view)!)
+        fileBrowser?.didMove(toParentViewController: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        self.addChildViewController(fileBrowser!)
-        addfilebroswerview()
-        fileBrowser?.didMove(toParentViewController: self)
-        
+        fileBrowser?.reload()
     }
-    
-    func initfilebrowser() {
-        //fileBrowser = FileBrowser(initialPath: paths[0])
-        fileBrowser = FileBrowser(initialPath: paths[0], allowEditing: true, showCancelButton: false)
-        
-    }
-    
-    func addfilebroswerview() {
-        //fileBrowser?.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - (self.tabBarController?.tabBar.frame.height)!)
-        self.view.addSubview((fileBrowser?.view)!)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        fileBrowser?.view.removeFromSuperview()
-        //fileBrowser = nil
-        
-        let vc = self.childViewControllers.last
-        vc?.willMove(toParentViewController: nil)
-        vc?.view.removeFromSuperview()
-        vc?.removeFromParentViewController()
-        
-        
-    }
-    
-
-
 }
