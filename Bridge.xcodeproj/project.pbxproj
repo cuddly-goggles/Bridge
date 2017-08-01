@@ -24,6 +24,7 @@
 		C4A8D9AF1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AC1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf */; };
 		C4A8D9B01F2E1CBC00B086A4 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AD1F2E1CBC00B086A4 /* OpenSans-CondLight.ttf */; };
 		C4A8D9B11F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A8D9AE1F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf */; };
+		C4C9C9151F30B0EE0019EFC0 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C9C9141F30B0EE0019EFC0 /* Version.swift */; };
 		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
 		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
 		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
@@ -59,6 +60,7 @@
 		C4A8D9AC1F2E1CBC00B086A4 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
 		C4A8D9AD1F2E1CBC00B086A4 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
 		C4A8D9AE1F2E1CBC00B086A4 /* OpenSans-CondLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLightItalic.ttf"; sourceTree = "<group>"; };
+		C4C9C9141F30B0EE0019EFC0 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				C4D84F351F269F21004571C8 /* Video.swift */,
 				C4A1E3B71F2D102400D7837E /* Server.swift */,
 				C4A1E3B91F2D339800D7837E /* URLSession.swift */,
+				C4C9C9141F30B0EE0019EFC0 /* Version.swift */,
 			);
 			name = "Server Inside";
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				C4A1E3BA1F2D339800D7837E /* URLSession.swift in Sources */,
 				C4599BBB1F23A1E40074101F /* Notif.swift in Sources */,
 				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,
+				C4C9C9151F30B0EE0019EFC0 /* Version.swift in Sources */,
 				C40604A81E42C8C400E0693B /* AppDelegate.swift in Sources */,
 				C40604CD1E42CD2A00E0693B /* NSObject+ObjcFlask.m in Sources */,
 				C40322921F22125A002AC943 /* FilesTableViewController.swift in Sources */,

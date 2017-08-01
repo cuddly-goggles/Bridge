@@ -13,15 +13,21 @@ import UIView_Shake
 import RMessage
 import AlertOnboarding
 import MessageUI
+import SwiftyJSON
 
 class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
     
     var downloadingViewObj: DownloadManagerViewController?
     
+    var version: Version?
     
+    @IBOutlet weak var youtube_dlVersion: UILabel!
+    
+    @IBOutlet weak var serverVersion: UILabel!
     @IBOutlet weak var toplabel: UILabel!
     @IBOutlet weak var linktext: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
+    
     
     @IBAction func reportBug(_ sender: Any) {
         sendEmail()
@@ -198,17 +204,25 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
             while true {
                 let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
                 if task.1 != nil {
+                    self.version = Version(JSON(task.0!))
                     DispatchQueue.main.async {
-                        self.stopAnimating()
-                        RMessage.showNotification(withTitle: "Server Initialized", subtitle: "Server is now running.", type: .success, customTypeName: nil, callback: nil)
+                        self.postinit()
                     }
                     break
                 }
-                sleep(2)
+                sleep(UInt32(0.5))
             }
         }
-        
-        
+    }
+    
+    func postinit() {
+        self.stopAnimating()
+        RMessage.showNotification(withTitle: "Server Initialized", subtitle: "Server is now running.", type: .success, customTypeName: nil, callback: nil)
+        guard let version = version else {
+            return
+        }
+        youtube_dlVersion.text = "youtube_dl Version: \(version.youtube_dl ?? "0")"
+        serverVersion.text = "Server Version: \(String(format: "%.1f", version.youtube_dl_api_server!))"
     }
 }
 
@@ -222,7 +236,9 @@ extension ExtractViewController: MFMailComposeViewControllerDelegate {
             mail.mailComposeDelegate = self
             mail.setToRecipients(["aboutsajjad@gmail.com"])
             mail.setSubject("Bridge - BUG")
-            mail.setMessageBody("<p>Bug Report Bridge</p>", isHTML: true)
+            mail.setMessageBody("<p>Bug Report Bridge</p> <p>youtube_dl Version: \(version?.youtube_dl ?? "0")</p> <p>Server Version: \(String(format: "%.1f", (version?.youtube_dl_api_server!)!))</p>", isHTML: true)
+            
+            
             present(mail, animated: true)
         } else {
             // show failure alert

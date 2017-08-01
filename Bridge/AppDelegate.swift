@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        API.shared.isServerup { (isup) in
+        API.shared.isServerup { (_, isup) in
             switch isup {
             case true:
                 NSLog("Server is already up")

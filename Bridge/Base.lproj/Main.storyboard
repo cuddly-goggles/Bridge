@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cCe-HV-bNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cCe-HV-bNh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -48,8 +49,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-z0-THc">
+                                <rect key="frame" x="109" y="610" width="157" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wc0-cr-n0d">
+                                <rect key="frame" x="56" y="602" width="263" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wc0-cr-n0d" firstAttribute="leading" secondItem="vkD-w8-ebT" secondAttribute="leadingMargin" constant="40" id="EXL-Zh-dqu"/>
+                            <constraint firstItem="cyg-z0-THc" firstAttribute="leading" secondItem="vkD-w8-ebT" secondAttribute="leadingMargin" constant="93" id="PAD-uh-M8d"/>
+                            <constraint firstItem="Wc0-cr-n0d" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="QPU-vU-Zud"/>
+                            <constraint firstItem="cyg-z0-THc" firstAttribute="top" secondItem="Wc0-cr-n0d" secondAttribute="bottom" constant="8" id="Ti6-e9-93k"/>
+                            <constraint firstItem="cyg-z0-THc" firstAttribute="centerX" secondItem="vkD-w8-ebT" secondAttribute="centerX" id="UQu-GJ-2E2"/>
+                            <constraint firstItem="pGI-2M-4bF" firstAttribute="top" secondItem="cyg-z0-THc" secondAttribute="bottom" constant="8" id="WMb-1X-WCJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyg-z0-THc" secondAttribute="trailing" constant="93" id="hLq-FL-5Zt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wc0-cr-n0d" secondAttribute="trailing" constant="40" id="ups-eg-UEg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Extract" id="yQ2-zF-d21">
                         <barButtonItem key="leftBarButtonItem" image="bug" id="r1X-E5-kLa">
@@ -68,7 +91,9 @@
                     <connections>
                         <outlet property="downloadBtn" destination="g2h-SG-Mgc" id="Rhh-XC-A5q"/>
                         <outlet property="linktext" destination="jwP-gJ-dPA" id="bFd-af-luk"/>
+                        <outlet property="serverVersion" destination="cyg-z0-THc" id="94p-V7-tAS"/>
                         <outlet property="toplabel" destination="dMt-fL-Uhn" id="gqp-Fe-z3C"/>
+                        <outlet property="youtube_dlVersion" destination="Wc0-cr-n0d" id="fra-Fw-zAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tt-Mp-92M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +223,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="CgT-Lg-XTh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Extraction" image="exreact" id="sSv-1y-Sgw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Il-3m-yaz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Il-3m-yaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -217,7 +242,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MpG-2X-qnA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Downloading" image="download" id="Of6-fS-7Lw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QPg-7S-EVq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPg-7S-EVq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -236,7 +261,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="na9-hV-n6D" customClass="FilesViewController" customModule="Bridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Documents" image="file" id="kW0-sf-bo3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2Z-mA-QkG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-mA-QkG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
