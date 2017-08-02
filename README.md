@@ -3,7 +3,7 @@
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aboutsajjad/Bridge/blob/master/LICENSE)
 
 # Bridge
-The easiest way to download videos from Youtube, Tumblr, Vine, Facebook, Instagram, Vimeo, Ted and few more sites and save them in gallery.
+The easiest way to download videos from Youtube, Tumblr, Vine, Facebook, Instagram, Vimeo, Ted and few more sites with your iDevice.
 
 > **Think this tool is worth supporting?**  
 Please Feel Free To Contribute! 
