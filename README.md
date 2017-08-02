@@ -19,6 +19,7 @@ pod install
 
 * [youtube-dl](https://github.com/rg3/youtube-dl/) - Command-line program to download videos from YouTube.com and other video sites
 * [youtube-dl-api-server](https://github.com/jaimeMF/youtube-dl-api-server) - A youtube-dl REST API server
+* [Python-Apple-support](https://github.com/pybee/Python-Apple-support) - A meta-package for building a version of Python that can be embedded into a macOS, iOS, tvOS or watchOS project.
 
 ## Authors
 
