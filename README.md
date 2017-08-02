@@ -7,7 +7,7 @@ Please Feel Free To Contribute!
 > **Have an issue**  
 Head over to https://github.com/aboutsajjad/Bridge/issues and report this to us and get help.
 
-## Install
+## Getting started
 
 ```shell
 git clone git@github.com:aboutsajjad/Bridge.git
