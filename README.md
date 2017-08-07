@@ -14,7 +14,7 @@ Head over to https://github.com/aboutsajjad/Bridge/issues and report this to us 
 ## Getting started
 
 ```shell
-git clone -b withServerInside git@github.com:aboutsajjad/Bridge.git
+git clone -b master git@github.com:aboutsajjad/Bridge.git
 cd Bridge
 pod install
 ```
