@@ -72,7 +72,6 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
-        //waitforServer()
         constraints()
         setUpDownloadingViewController()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
@@ -120,7 +119,6 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
             presentAlertview(alertController)
         }
     }
-    
     
     func actionArray(video: Video) {
         let alertController = UIAlertController(title: nil, message: "\(video.title ?? "")", preferredStyle: .actionSheet)
@@ -184,36 +182,6 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
         
         downloadingViewObj = mzDownloadingNav.viewControllers[0] as? DownloadManagerViewController
     }
-    
-    
-    func waitforServer() {
-        let myqueue = DispatchQueue(label: "waitforsercer")
-        
-        startAnimating(nil, message: "Wait a moment please!", messageFont: nil, type: .ballScaleMultiple, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil)
-        myqueue.async {
-            while true {
-                let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
-                if task.1 != nil {
-                    self.version = Version(JSON(task.0!))
-                    DispatchQueue.main.async {
-                        self.postinit()
-                    }
-                    break
-                }
-                sleep(UInt32(0.5))
-            }
-        }
-    }
-    
-    func postinit() {
-        self.stopAnimating()
-        RMessage.showNotification(withTitle: "Server Initialized", subtitle: "Server is now running.", type: .success, customTypeName: nil, callback: nil)
-        guard let version = version else {
-            return
-        }
-        youtube_dlVersion.text = "youtube_dl Version: \(version.youtube_dl ?? "0")"
-        serverVersion.text = "Server Version: \(String(format: "%.1f", version.youtube_dl_api_server!))"
-    }
 }
 
 
@@ -226,9 +194,6 @@ extension ExtractViewController: MFMailComposeViewControllerDelegate {
             mail.mailComposeDelegate = self
             mail.setToRecipients(["aboutsajjad@gmail.com"])
             mail.setSubject("Bridge - BUG")
-            mail.setMessageBody("<p>Bug Report Bridge</p> <p>youtube_dl Version: \(version?.youtube_dl ?? "0")</p> <p>Server Version: \(String(format: "%.1f", (version?.youtube_dl_api_server!)!))</p>", isHTML: true)
-            
-            
             present(mail, animated: true)
         } else {
             // show failure alert

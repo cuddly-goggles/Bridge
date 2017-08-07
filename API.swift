@@ -15,7 +15,7 @@ class API {
     var youtube_dl: ObjcFlask?
     
     func initobject() {
-        youtube_dl = ObjcFlask()
+        self.youtube_dl = ObjcFlask()
     }
     
     func info(_ url: String, completion: @escaping (Entries?, Bool) -> ()) {
@@ -25,7 +25,9 @@ class API {
                 let json = JSON(data: dataFromString)
                 switch json["is_error"].boolValue {
                 case true:
-                    RMessage.showNotification(withTitle: "Error", subtitle: json["error_msg"].stringValue, type: .error, customTypeName: nil, callback: nil)
+                    DispatchQueue.main.async {
+                        RMessage.showNotification(withTitle: "Error", subtitle: json["error_msg"].stringValue, type: .error, customTypeName: nil, callback: nil)
+                    }
                     completion(nil, true)
                 case false:
                     guard let data = json["data"].string?.data(using: .utf8, allowLossyConversion: false) else { return }
