@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Notif.shared.requestgrant()
-        //SwiftyFlask.shared.run_server()
+        return true
+    }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        API.shared.initobject()
         return true
     }
 
@@ -37,21 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        API.shared.isServerup { (_, isup) in
-            switch isup {
-            case true:
-                NSLog("Server is already up")
-            case false:
-                switch Server.shared.serverState {
-                case .assignedTorun, .running:
-                    NSLog("Goona run or running")
-                case .notInitialized:
-                    NSLog("Server was not up")
-                    Server.shared.runserver()
-                }
-            }
-        }
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+                // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

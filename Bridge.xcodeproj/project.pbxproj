@@ -27,7 +27,6 @@
 		C4C9C9151F30B0EE0019EFC0 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C9C9141F30B0EE0019EFC0 /* Version.swift */; };
 		C4D84F341F269F00004571C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F331F269F00004571C8 /* API.swift */; };
 		C4D84F361F269F21004571C8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D84F351F269F21004571C8 /* Video.swift */; };
-		C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */; };
 		C4EFEE361E43719C00E0BED6 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C4EFEE351E43719C00E0BED6 /* __main__.py */; };
 		C4EFEE3B1E43B24A00E0BED6 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE371E43B24A00E0BED6 /* BZip2.framework */; };
 		C4EFEE3C1E43B24A00E0BED6 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */; };
@@ -63,7 +62,6 @@
 		C4C9C9141F30B0EE0019EFC0 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		C4D84F331F269F00004571C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4D84F351F269F21004571C8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "youtube-dl.swift"; sourceTree = "<group>"; };
 		C4EFEE351E43719C00E0BED6 /* __main__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
 		C4EFEE371E43B24A00E0BED6 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
 		C4EFEE381E43B24A00E0BED6 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				C40604CB1E42CD2A00E0693B /* NSObject+ObjcFlask.h */,
 				C40604CC1E42CD2A00E0693B /* NSObject+ObjcFlask.m */,
 				C4EFEE351E43719C00E0BED6 /* __main__.py */,
-				C4EFABBF1E43FE1000E725BF /* youtube-dl.swift */,
 			);
 			name = "Youtube-dl";
 			sourceTree = "<group>";
@@ -375,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A1E3B81F2D102400D7837E /* Server.swift in Sources */,
-				C4EFABC01E43FE1000E725BF /* youtube-dl.swift in Sources */,
 				C4A1E3BA1F2D339800D7837E /* URLSession.swift in Sources */,
 				C4599BBB1F23A1E40074101F /* Notif.swift in Sources */,
 				C403228A1F21FE7D002AC943 /* DownloadManagerViewController.swift in Sources */,

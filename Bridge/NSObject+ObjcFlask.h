@@ -13,5 +13,5 @@
 #include <dlfcn.h>
 
 @interface ObjcFlask: NSObject
-- (void) run_server: (int)port;
+    - (NSString*) excreact_info: (NSString*)url;
 @end

@@ -26,7 +26,7 @@ struct Server {
     }
     mutating func runserver() {
         RMessage.showNotification(withTitle: "Server Initialization", subtitle: "Initializing Server please wait a moment", type: .warning, customTypeName: nil, callback: nil)
-        objcServer.run_server(9191)
+        //objcServer.run_server(9191)
         serverState = .assignedTorun
         
     }

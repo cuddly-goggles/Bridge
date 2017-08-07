@@ -16,8 +16,6 @@ struct Format {
     var url: String?
 }
 
-
-
 struct Video {
     var formats: [Format] = []
     var title: String?
@@ -37,46 +35,32 @@ struct Video {
     }
 }
 
-
-
-
-
 class Entries {
-    
-    var errmsg: String
-    var errorOccured: Bool
     var title: String?
     var videos: [Video] = []
     
-    init(json: JSON) {
-        if let error = json["error"].string {
-            errmsg = error
-            errorOccured = true
+    init(_ json: JSON) {
+        title = json["title"].string
+        if let entries = json["entries"].array {
+            
+            for entrie in entries {
+                guard let formats = entrie["formats"].array else {
+                    return
+                }
+                let video = Video(formats: formats, title: entrie["title"].string)
+                videos.append(video)
+            }
         } else {
-            title = json["info"]["title"].string
-            if let entries = json["info"]["entries"].array {
-                for entrie in entries {
-                    guard let formats = entrie["formats"].array else {
-                        errmsg = ""
-                        errorOccured = true
-                        return
-                    }
-                    let video = Video(formats: formats, title: entrie["title"].string)
-                    videos.append(video)
-                }
+            if let formats = json["formats"].array {
+                
+                let video = Video(formats: formats, title: json["title"].string)
+                videos.append(video)
             } else {
-                if let formats = json["info"]["formats"].array {
-                    let video = Video(formats: formats, title: json["info"]["title"].string)
-                    videos.append(video)
-                } else {
-                    let video = Video(format: Format(format: json["info"]["format"].string, formatID: json["info"]["format_id"].string, ext: json["info"]["ext"].string, url: json["info"]["url"].string), title: json["info"]["title"].string)
-                    videos.append(video)
-                    
-                }
+                let video = Video(format: Format(format: json["format"].string, formatID: json["format_id"].string, ext: json["ext"].string, url: json["url"].string), title: json["title"].string)
+                videos.append(video)
+                
             }
         }
-        errmsg = ""
-        errorOccured = false
     }
 }
 

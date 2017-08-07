@@ -12,15 +12,30 @@ import SwiftyJSON
 import RMessage
 class API {
     static let shared = API()
+    var youtube_dl: ObjcFlask?
     
-    
-    let BASEURL: String = "http://127.0.0.1:9191"
-    
+    func initobject() {
+        youtube_dl = ObjcFlask()
+    }
     
     func info(_ url: String, completion: @escaping (Entries?, Bool) -> ()) {
-        let parameters: Parameters = ["url": url, "flatten": "False"]
-        
-        Alamofire.request(BASEURL + "/api/info", method: .get, parameters: parameters).responseJSON { (response) in
+        DispatchQueue.global().async {
+            guard let response = self.youtube_dl?.excreact_info(url) else {return}
+            if let dataFromString = response.data(using: .utf8, allowLossyConversion: false) {
+                let json = JSON(data: dataFromString)
+                switch json["is_error"].boolValue {
+                case true:
+                    RMessage.showNotification(withTitle: "Error", subtitle: json["error_msg"].stringValue, type: .error, customTypeName: nil, callback: nil)
+                    completion(nil, true)
+                case false:
+                    guard let data = json["data"].string?.data(using: .utf8, allowLossyConversion: false) else { return }
+                    completion(Entries(JSON(data: data)), false)
+                }
+            }
+        }
+    }
+}
+        /*Alamofire.request(BASEURL + "/api/info", method: .get, parameters: parameters).responseJSON { (response) in
             switch response.result {
             case .success:
                 switch response.response!.statusCode {
@@ -43,18 +58,6 @@ class API {
                 completion(nil, false)
             }
         }
-    }
+    }*/
     
-    func isServerup(completion: @escaping (Version, Bool) -> ()) {
-        
-        Alamofire.request(BASEURL+"/api/version").responseJSON { (response) in
-            switch response.result {
-            case .success:
-                completion(Version(JSON(response.result.value as Any)), true)
-            case .failure:
-                completion(Version(JSON(response.result.value as Any)), false)
-            }
-        }
-    }
-    
-}
+

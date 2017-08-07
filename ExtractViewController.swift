@@ -46,27 +46,17 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
         if let url = linktext.text {
             if url != "" {
                 startAnimating()
-                API.shared.info(url, completion: { (entries, sucess) in
-                    switch sucess {
-                    case true:
+                API.shared.info(url, completion: { (entries, error) in
+                    switch error {
+                    case false:
                         guard let entries = entries else {
                             return
                         }
-                        switch entries.errorOccured {
-                        case true:
-                            DispatchQueue.main.async {
-                                self.stopAnimating()
-                            }
-                            RMessage.showNotification(withTitle: "Error", subtitle: entries.errmsg, type: .error, customTypeName: nil, callback: nil)
-                            
-                        case false:
-                            DispatchQueue.main.async {
-                                self.stopAnimating()
-                                debugPrint(entries.videos.count)
-                                self.playlistActionArray(entries: entries)
-                            }
+                        self.playlistActionArray(entries: entries)
+                        DispatchQueue.main.async {
+                            self.stopAnimating()
                         }
-                    case false:
+                    case true:
                         DispatchQueue.main.async {
                             self.stopAnimating()
                         }
@@ -82,7 +72,7 @@ class ExtractViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
-        waitforServer()
+        //waitforServer()
         constraints()
         setUpDownloadingViewController()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
