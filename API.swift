@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 import RMessage
+
 class API {
     static let shared = API()
     var youtube_dl: ObjcFlask?

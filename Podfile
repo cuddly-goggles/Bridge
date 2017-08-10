@@ -14,5 +14,4 @@ pod 'UIView+Shake'
 pod 'KYCircularProgress'
 pod "RMessage"
 pod 'AlertOnboarding'
-pod 'Alamofire', '~> 4.4'
 end
