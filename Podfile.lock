@@ -4,16 +4,16 @@ PODS:
   - HexColors (4.0.0)
   - KYCircularProgress (1.0.1)
   - MZDownloadManager (3.3)
-  - NVActivityIndicatorView (3.7.0):
-    - NVActivityIndicatorView/Presenter (= 3.7.0)
-  - NVActivityIndicatorView/Presenter (3.7.0)
+  - NVActivityIndicatorView (4.0.0):
+    - NVActivityIndicatorView/Presenter (= 4.0.0)
+  - NVActivityIndicatorView/Presenter (4.0.0)
   - PPTopMostController (0.0.1)
-  - RMessage (2.1.3):
+  - RMessage (2.1.5):
     - HexColors (~> 4.0)
     - PPTopMostController
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
-  - UIView+Shake (1.3.0)
+  - UIView+Shake (1.4.0)
 
 DEPENDENCIES:
   - AlertOnboarding
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FileBrowser:
-    :commit: 331363537cf8faa1949e6b0e6c7eb5c79e00e92a
+    :commit: 7797293b93c5b3bd90c86e39264d8c5909464cef
     :git: https://github.com/aboutsajjad/FileBrowser.git
 
 SPEC CHECKSUMS:
@@ -41,13 +41,13 @@ SPEC CHECKSUMS:
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
   KYCircularProgress: b782af0a68dd2032a4a523e722ec8d571c285cf2
   MZDownloadManager: b6ee998b15a05b25f011d9c715ec6b184729a258
-  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
-  RMessage: ddccf3531d5aa4c902521a1f3370a1263492a658
+  RMessage: 31d44bd26a8f353f987d2e7194f3e9ffb203cbf2
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  UIView+Shake: 3ccbf966d40a76ea2cdbdd48d8219d322d5df5f5
+  UIView+Shake: 055ad67721de1f74d29c0a1d464697e505dfc62f
 
 PODFILE CHECKSUM: f541ae8493b8d9130540cd1efbcbcdca049db3f6
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

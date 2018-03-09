@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-CondBold.ttf">
+            <string>OpenSans-CondensedBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -27,5 +33,94 @@
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
+        <!--Extract-->
+        <scene sceneID="aBW-eC-buq">
+            <objects>
+                <viewController id="XbL-bQ-F3p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTt-O9-tQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Li5-pj-3fW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UxI-gF-EUu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dul-a9-fWJ">
+                                <rect key="frame" x="143" y="305" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Extract!"/>
+                                <connections>
+                                    <action selector="download:" destination="XbL-bQ-F3p" eventType="touchUpInside" id="Ann-2e-3jz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g https://www.youtube.com/watch?v=UHwVyplU3Pg" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CFC-m2-lGr">
+                                <rect key="frame" x="39" y="260" width="296" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a URL from YouTube, Facebook, DailyMotion, Vimeo, Ted, Instagram or various other sites and press the 'Extract!' button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="kac-a5-BMy">
+                                <rect key="frame" x="23" y="138" width="318" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-CondensedBold" family="Open Sans Condensed" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKX-zg-Sv7">
+                                <rect key="frame" x="109" y="659" width="157" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIF-Pa-fRA">
+                                <rect key="frame" x="56" y="651" width="263" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lIF-Pa-fRA" firstAttribute="leading" secondItem="UxI-gF-EUu" secondAttribute="leadingMargin" constant="40" id="1t1-A2-EE4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lIF-Pa-fRA" secondAttribute="trailing" constant="40" id="8Mw-HQ-Qym"/>
+                            <constraint firstItem="SKX-zg-Sv7" firstAttribute="top" secondItem="lIF-Pa-fRA" secondAttribute="bottom" constant="8" id="EsS-E0-XgE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SKX-zg-Sv7" secondAttribute="trailing" constant="93" id="H4A-BH-TWR"/>
+                            <constraint firstItem="SKX-zg-Sv7" firstAttribute="centerX" secondItem="UxI-gF-EUu" secondAttribute="centerX" id="I5a-CN-OJr"/>
+                            <constraint firstItem="lIF-Pa-fRA" firstAttribute="centerX" secondItem="UxI-gF-EUu" secondAttribute="centerX" id="ZRO-rw-Gcy"/>
+                            <constraint firstItem="SKX-zg-Sv7" firstAttribute="leading" secondItem="UxI-gF-EUu" secondAttribute="leadingMargin" constant="93" id="r2G-0J-2xe"/>
+                            <constraint firstItem="Li5-pj-3fW" firstAttribute="top" secondItem="SKX-zg-Sv7" secondAttribute="bottom" constant="8" id="u61-v2-L7h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Extract" id="TdL-BJ-LLq">
+                        <barButtonItem key="leftBarButtonItem" image="bug" id="iHP-3N-7zM">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="reportBug:" destination="XbL-bQ-F3p" id="kKg-ps-Jhb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="sJr-Wy-MjI">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="help:" destination="XbL-bQ-F3p" id="muC-gc-IqQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="downloadBtn" destination="Dul-a9-fWJ" id="0Gn-PM-uev"/>
+                        <outlet property="linktext" destination="CFC-m2-lGr" id="z4h-K7-NoC"/>
+                        <outlet property="serverVersion" destination="SKX-zg-Sv7" id="TtK-J0-lHM"/>
+                        <outlet property="toplabel" destination="kac-a5-BMy" id="rJU-q0-qzV"/>
+                        <outlet property="youtube_dlVersion" destination="lIF-Pa-fRA" id="nGB-lS-xL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UT9-9u-eHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5999999999999" y="-116.49175412293854"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="bug" width="32" height="32"/>
+        <image name="info" width="25" height="25"/>
+    </resources>
 </document>
