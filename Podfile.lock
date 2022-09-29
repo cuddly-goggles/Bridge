@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.7.0)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - FileBrowser (1.0.0)
+  - HexColors (4.0.0)
+  - MBCircularProgressBar (0.3.5)
+  - MZDownloadManager (3.3)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - PPTopMostController (0.0.1)
+  - RMessage (2.2.1):
+    - HexColors (~> 4.0)
+    - PPTopMostController
+  - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
+  - UIView+Shake (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - ChameleonFramework
+  - FileBrowser (~> 1.0)
+  - MBCircularProgressBar
+  - MZDownloadManager
+  - NVActivityIndicatorView
+  - RMessage
+  - SnapKit (~> 4.0.0)
+  - SwiftyJSON
+  - UIView+Shake
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
+  HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  MZDownloadManager: b6ee998b15a05b25f011d9c715ec6b184729a258
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
+  RMessage: 37b1ab9d92ec1ffbafbbbdfc6f10c9524829c4e6
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  UIView+Shake: 055ad67721de1f74d29c0a1d464697e505dfc62f
+
+PODFILE CHECKSUM: 0c3044aa9266ade0833143e692713fd2060ef446
+
+COCOAPODS: 1.4.0
